@@ -21,7 +21,7 @@ body {
 }
 
 .scrolling-text .scrolling-text-content {
-  color: black;
+  color: #000;
   font-size: 120px;
   white-space: nowrap;
   transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
