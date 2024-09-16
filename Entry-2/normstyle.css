@@ -3,13 +3,15 @@ h1 {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 50;
 }
+
+.sbt {
+  text-align: right;
+  
+}
+
 .first-paragraph {
   text-align: center;
 
-}
-
-#subtitle {
-  text-align: center;
 }
 
 .Second-paragraph { 
