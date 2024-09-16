@@ -22,7 +22,7 @@ html {
   font-family:Helvetica;
   white-space: nowrap;
   transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
-  line-height: 0.75em;
+  line-height: 0.7em;
   margin: 0px;
   
 }
