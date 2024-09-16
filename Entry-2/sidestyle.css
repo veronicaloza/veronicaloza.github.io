@@ -3,10 +3,6 @@ html {
   overflow: hidden;
 }
 
-body {
-  background: #FFF;
-}
-
 .container {
   position: relative;
   width: 100vw;
@@ -23,9 +19,12 @@ body {
 .scrolling-text .scrolling-text-content {
   color: #000;
   font-size: 120px;
+  font-family:Helvetica;
   white-space: nowrap;
   transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
-  line-height: 1em;
-  margin: 50px 0;
+  line-height: 0.75em;
+  margin: 0px;
+  
 }
+
 
