@@ -1,4 +1,21 @@
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 50;
+}
+.first-paragraph {
+  text-align: center;
+
+}
+
+#subtitle {
+  text-align: center;
+}
+
+.Second-paragraph { 
+  text-align: left;
+}
 body,
 html {
-  overflow: auto;
+  overflow: auto; 
 }
