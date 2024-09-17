@@ -1,3 +1,19 @@
 body {
-  background-image: linear-gradient ();
+  background-image: linear-gradient(white, beige);
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.thrdtitle {
+   color: greenyellow;
+}
+
+.bottom-right {
+  font-size: 70px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: greenyellow;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
 }
