@@ -1,23 +1,61 @@
+
 h1 {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 50;
 }
 
-.sbt {
-  text-align: right;
+.datetitle {
+  justify-content: space-around;
+  display: inline-block;
+
   
 }
 
-.first-paragraph {
+#Entry1 {
   text-align: center;
+}
+
+.sbt {
+  text-align: right;
+  color:blue
+}
+
+.container {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 3fr 3fr 3fr;
+ }
+ 
+ img {
+   max-width: 200%;
+   max: height 150px;
+   rotate:;
+ }
+ 
+ .text {
+   font-size: 70px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   text-align: left;
+   color:greenyellow
+ }
+
+.first-paragraph {
+  display: inline-block;
+  text-align: right;
+  text-align: justify;
+  align-items: flex-end;
 
 }
 
-.Second-paragraph { 
-  text-align: left;
+.Scndpara {
+  text-align: justify;
+  background-color: black;
+  color: aliceblue;
 }
+
 body,
 html {
   overflow: auto; 
+
 }
