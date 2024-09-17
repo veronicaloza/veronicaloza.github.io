@@ -48,8 +48,27 @@ h1 {
   color: greenyellow;
 }
 
+.thrdtitle {
+  color: greenyellow;
+  text-align: center;
+  font-weight: 900;
+}
+
+.frthtitle{ 
+  color: greenyellow;
+  text-align: center;
+  font-weight: 900;
+}
+
+.Molluscantitle {
+  color: greenyellow;
+ text-align: center;
+ font-weight: 900;
+}
+
+
 body,
 html {
   overflow: auto; 
-  
+
 }
