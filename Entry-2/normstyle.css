@@ -48,12 +48,14 @@ h1 {
 
 .Scndpara {
   text-align: justify;
-  background-color: beige;
-  color: blue;
+  background-color:;
+  color: greenyellow;
 }
 
 body,
 html {
   overflow: auto; 
+ background-image: linear-gradient(white, beige);
+
 
 }
