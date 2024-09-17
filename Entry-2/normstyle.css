@@ -8,8 +8,6 @@ h1 {
 .datetitle {
   justify-content: space-around;
   display: inline-block;
-
-  
 }
 
 #Entry1 {
@@ -24,18 +22,20 @@ h1 {
 .container {
   display: grid;
   align-items: center; 
-  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
  }
  
  img {
-   max-width: 200%;
-   max: height 150px;
-   rotate:;
+   max-width: 150%;
+   max-height: 150%;
  }
  
  .text {
-   font-family: Arial, Helvetica, sans-serif;
-   text-align: left;
+   font-size: 70px;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   color: greenyellow;
+   font-weight: bold;
  }
 
 .first-paragraph {
@@ -48,8 +48,8 @@ h1 {
 
 .Scndpara {
   text-align: justify;
-  background-color: black;
-  color: aliceblue;
+  background-color: beige;
+  color: blue;
 }
 
 body,
