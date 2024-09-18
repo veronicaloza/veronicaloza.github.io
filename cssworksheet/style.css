@@ -1,0 +1,176 @@
+/* Add Question 1 CSS below: */
+.color-word{
+  color:red;
+}
+
+/* Add Question 2 CSS below: */
+
+
+/* Question 3/4 */
+.highlight-me{
+  color:black;
+  font-size:16px;
+}
+
+/* Question 5 */
+.side-by-side{
+  width:120px;
+  height:70px;
+  background-color:black;
+  margin:10px;
+}
+
+/* Question 6 */
+.gone{
+  background-color:lightgrey;
+  color:grey;
+  font-size:30px;
+  width:100px;
+}
+
+/* Question 7 */
+.increase-orange{
+  background-color:orange;
+  display:inline-block;
+}
+
+/* Question 8 */
+.separate-me{
+  background-color:green;
+  width:200px;
+  height:20px;
+}
+
+/* Question 9 */
+.user-friendly{
+  background-color:black;
+  color:white;
+  text-decoration:none;
+}
+
+
+/* Question 10 */
+.static{
+  background-color:#00ffff;
+  text-align:center;
+  width:100px;
+  height:100px;
+}
+.center-me{
+  display:inline-block;
+}
+
+/* Question 11 */
+.left-upward{
+  width:200px;
+  height:60px;
+  background-color:green;
+}
+
+/* Question 12 */
+.fixed-btn{
+  background-color:pink;
+  width:130px;
+  padding:20px;
+  text-align:center;
+  text-decoration:none;
+  color:black;
+}
+
+/* Question 13 */
+.position-20-40{
+  background-color:#bb00ff;
+  width:200px;
+  height:100px;
+}
+
+/* Question 14 */
+.dont-move{
+  width:200px;
+  height:50px;
+  background-color:grey;
+}
+.move-me{
+  width:220px;
+  height:60px;
+  background-color:blue;
+}
+
+/* Question 15 */
+
+/* Question 16 */
+.larger-div{
+  background-color:red;
+  width:260px;
+  height:260px;
+}
+.smaller-div{
+  background-color:purple;
+  width:200px;
+  height:200px;
+}
+
+
+/* Question 17 */
+.parent-div{
+  width:300px;
+  height:300px;
+  position:relative;
+  background-color:lightgrey;
+}
+.child-div{
+  background-color:#4287f5;
+  width:50px;
+  height:50px;
+  position:absolute;
+  bottom:0px;
+  right:0px;
+}
+
+/* Question 20 */
+.replicate-me{
+  background-color:lightgrey;
+  width:400px;
+  height:300px;
+  position:relative;
+}
+.replicate-me div{
+  width:120px;
+  height:120px;
+  position:absolute;
+}
+.red-square{
+  background-color:#f0002c;
+}
+.pink-square{
+  background-color:#e0abd8;
+}
+.yellow-square{
+  background-color:#f0c800;
+}
+.green-square{
+  background-color:#32a852;
+}
+.blue-square{
+  background-color:#0486d6;
+}
+
+/* Default Styles */
+
+p{
+  color:grey;
+  font-size:14px;
+  max-width:460px;
+}
+
+body{
+  padding-bottom:200px;
+}
+
+.img-ref{
+  width:400px;
+}
+
+h3{
+  text-decoration:underline;
+}
