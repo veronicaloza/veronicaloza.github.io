@@ -57,19 +57,30 @@
 }
 
 /* Question 9 */
-.user-friendly{
-  background-color:black;
-  color:white;
-  text-decoration:none;
-}
 
+.user-friendly {
+
+  display: inline-block;
+  padding: 10px ; /* Adds space inside the button */
+  margin: 5px; /* Adds space between buttons */
+  border: 2px solid #DBEFBC; /* Adds a border with a color */
+  border-radius: 8px; /* Rounds the corners */
+  text-decoration: none; /* Removes the underline */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9BC4CB; /* Sets the text color */
+  font-size: 24px; /* Adjusts font size */
+  background-color: #E2FADB; /* Light background color */
+}
 
 /* Question 10 */
 .static{
+  
   background-color:#00ffff;
   text-align:center;
   width:100px;
   height:100px;
+  line-height: 100px;
+  
 }
 .center-me{
   display:inline-block;
@@ -80,6 +91,9 @@
   width:200px;
   height:60px;
   background-color:green;
+  position: relative;
+  top: -50px;
+  left: 50px;
 }
 
 /* Question 12 */
@@ -90,6 +104,9 @@
   text-align:center;
   text-decoration:none;
   color:black;
+  position: fixed;
+  top:10px;
+  right: 10px;
 }
 
 /* Question 13 */
@@ -97,6 +114,8 @@
   background-color:#bb00ff;
   width:200px;
   height:100px;
+  top: 20px;
+  left: 40px;
 }
 
 /* Question 14 */
@@ -109,10 +128,15 @@
   width:220px;
   height:60px;
   background-color:blue;
+  position:relative;
+  left: 30px;
+  top: -30px;
 }
 
 /* Question 15 */
-
+.question15{
+ 
+}
 /* Question 16 */
 .larger-div{
   background-color:red;
@@ -188,4 +212,68 @@ body{
 
 h3{
   text-decoration:underline;
+}
+
+
+/*question 22*/
+
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.empire-state-building {
+  position: relative;
+  width: 60px;
+  background-color: #555;
+}
+
+.building-body {
+  height: 500px;
+  background-color: #444;
+  border: 2px solid #333;
+  border-radius: 5px 5px 0 0;
+  margin: 0 auto;
+}
+
+.building-top {
+  width: 40px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 5px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.antenna {
+  width: 10px;
+  height: 80px;
+  background-color: #222;
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.window {
+  width: 8px;
+  height: 20px;
+  background-color: #666;
+  margin: 2px;
+  display: inline-block;
+}
+
+.windows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
 }
