@@ -1,20 +1,74 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <p>hello</p>
-        
-        <script src="" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Codrops Cutout Collage Layout with CSS Grid and Clip-path Demo</title>
+</head>
+<body class="site">
+  <header class="site__header">
+    <p>When: <span class="block">May 10-12</span></p>
+    <p>Where: <span class="block">UCL London</span></p>
+     <nav class="site__nav">
+      <ul class="site__nav-list">
+        <li><a class="site__nav-link" href="">Home Page</a></li>
+        <li><a class="site__nav-link"  href="/">Seashells X-Ray</a></li>
+        <li><a class="site__nav-link"  href="/">Experimentation</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <div class="container">
+        <h1 class="heading rellax" data-rellax-speed="-5">
+          <mark>2020</mark>
+          <br />
+          <mark>golden makers</mark>
+          <br />  
+          <mark>Awards &amp; Ceremony</mark>
+        </h1>
+      
+        <div class="grid-container">
+        <div class="grid" aria-hidden="true">
+          <div class="grid__item grid__item--bg">
+          <img src="Blue Boxed Neptunea Full Body.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-half rellax" data-rellax-speed="3">
+          <img src="Neptunea Half Body.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-neck rellax" data-rellax-speed="-5">
+          <img src="Neptunea pixelated.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-left rellax" data-rellax-speed="4">
+          <img src="" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-eye rellax" data-rellax-speed="1">
+          <img src="Neptunea Distorted Top.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-shirt rellax" data-rellax-speed="4">
+          <img src="s3-us-west-2.amazonaws.com/s.cdpn.io/110238/codrops-portrait-shirt.jpg" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-bg-1 rellax" data-rellax-speed="-2">
+          <img src="/s3-us-west-2.amazonaws.com/s.cdpn.io/110238/codrops-bg-1.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-bg-2 rellax" data-rellax-speed="3">
+          <img src="Neptunea Sharp Angles.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-bg-3 rellax" data-rellax-speed="3">
+          <img src="Neptunea Sharp Angles.png" alt="">
+        </div>
+        <div class="grid__item grid__item--portrait-bg-4 rellax" data-rellax-speed="-8">
+          <img src="" alt="">
+        </div>
+      </div>
+     </div>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script>
+  <script src="app.js"></script>
+</body>
 </html>
