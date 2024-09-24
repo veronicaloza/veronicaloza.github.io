@@ -1,7 +1,4 @@
-* {
-    box-sizing: border-box;
-  }
-  
+
   .html {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,13 +10,13 @@
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 68, 0, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), white;
     background-repeat: no-repeat;
     color: #FFF;
-    min-height: 120vh; /* allows room for scrolling to see parallax */
-    height: 100%;
+    
   }
   
 .site__header,
 .site__nav-list {
     display: flex;
+    align-items: center;
   }
   
 .site__header {
