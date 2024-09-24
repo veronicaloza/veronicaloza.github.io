@@ -112,8 +112,9 @@
     z-index: 0;
     grid-row: 1 / -1;
     position: relative;
-    top: 250px;
-    
+    display:flex;
+    align-items: center;
+   scale: 1.9;
   }
   
   .grid__item--portrait-half {
