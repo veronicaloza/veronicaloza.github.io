@@ -10,7 +10,7 @@
   }
   
 .site {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 68, 0, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), #364b49;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 68, 0, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), white;
     background-repeat: no-repeat;
     color: #FFF;
     min-height: 120vh; /* allows room for scrolling to see parallax */
@@ -49,7 +49,7 @@
   .site__nav-link {
     display: block;
     text-decoration: none;
-    color: #FFF;
+    color: rgba(255, 68, 0, 0.9);
     padding-bottom: .625rem;
   }
   
