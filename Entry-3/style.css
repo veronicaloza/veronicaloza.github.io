@@ -47,7 +47,7 @@
 .site__nav-link {
   display: block;
   text-decoration: none;
-  color: #FFF;
+  color:rgba(255, 115, 0, 0.9);
   padding-bottom: .625rem;
 }
 
