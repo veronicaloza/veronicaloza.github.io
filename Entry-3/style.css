@@ -125,13 +125,9 @@
     z-index: 2;
     grid-row: 1 / -1;
     scale:3;
-    -webkit-clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 98%, 11% 98%, 4% 66%, 4% 34%);
-    clip-path: polygon(5% 10%, 27% 3%, 94% 25%, 84% 98%, 39% 98%, 11% 98%, 4% 66%, 4% 34%);
   }
   
   .grid__item--portrait-neck {
-    -webkit-clip-path: polygon(5% 3%, 96% 4%, 95% 95%, 6% 95%, 20% 30%);
-    clip-path: polygon(5% 3%, 96% 4%, 95% 95%, 6% 95%, 20% 30%);
     grid-column: 5 / span 4;
     grid-row: 6 / 11;
     z-index: 3;
@@ -142,16 +138,12 @@
   }
   
   .grid__item--portrait-left {
-    -webkit-clip-path: polygon(10% 19%, 93% 15%, 90% 88%, 13% 92%);
-    clip-path: polygon(10% 19%, 93% 15%, 90% 88%, 13% 92%);
     grid-column: 2 / span 4;
     grid-row: 6 / 12;
     z-index: 4;
   }
   
   .grid__item--portrait-eye {
-    -webkit-clip-path: polygon(4% 13%, 84% 12%, 86% 34%, 80% 45%, 80% 76%, 10% 90%);
-    clip-path: polygon(4% 13%, 84% 12%, 86% 34%, 80% 45%, 80% 76%, 10% 90%);
     grid-column: 4 / span 2;
     grid-row: 3 / 5;
     z-index: 5;
@@ -165,16 +157,13 @@
   }
   
   .grid__item--portrait-shirt {
-    -webkit-clip-path: polygon(3% 2%, 50% 25%, 97% 8%, 97% 97%, 3% 98%);
-    clip-path: polygon(3% 2%, 50% 25%, 97% 8%, 97% 97%, 3% 98%);
+   
     grid-column: 1 / span 2;
     grid-row: 11 / -1;
     z-index: 6;
   }
   
   .grid__item--portrait-bg-1 {
-    -webkit-clip-path: polygon(14% 13%, 84% 12%, 86% 34%, 90% 66%, 30% 76%, 10% 79%);
-    clip-path: polygon(14% 13%, 84% 12%, 86% 34%, 90% 66%, 30% 76%, 10% 79%);
     grid-column: 1 / span 2;
     grid-row: 1 / 4;
     z-index: 8;
@@ -194,8 +183,7 @@
   }
   
   .grid__item--portrait-bg-3 {
-    -webkit-clip-path: polygon(9% 4%, 80% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(9% 4%, 80% 0%, 100% 100%, 0% 100%);
+ 
     grid-column: 1 / span 3;
     grid-row: 4 / 7;
     z-index: 4;
@@ -207,8 +195,6 @@
   }
   
 .grid__item--portrait-bg-4 {
-    -webkit-clip-path: polygon(5% 4%, 94% 3%, 97% 96%, 13% 96%);
-    clip-path: polygon(5% 4%, 94% 3%, 97% 96%, 13% 96%);
     grid-column: 10 / 12;
     grid-row: 1 / 6;
     z-index: 1;
