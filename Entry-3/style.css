@@ -16,6 +16,8 @@
 .site__nav-list {
     display: flex;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 68, 0, 0.9)
   }
   
 .site__header {
@@ -46,7 +48,7 @@
   .site__nav-link {
     display: block;
     text-decoration: none;
-    color: rgba(255, 68, 0, 0.9);
+    color: rgba(255, 186, 161, 0.9);
     padding-bottom: .625rem;
   }
   
