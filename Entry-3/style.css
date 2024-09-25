@@ -116,26 +116,27 @@
     position: relative;
     display:flex;
     align-items: center;
-   scale: 1.9;
+   scale: 3;
   }
   
   .grid__item--portrait-half {
     grid-column: 6 / span 6;
     position: relative;
-    top: 300px;
+    top: 500px;
     right: 80px;
     z-index: 2;
     grid-row: 1 / -1;
-    scale:3;
+    scale:4;
+
   }
   
   .grid__item--portrait-neck {
     grid-column: 5 / span 4;
     grid-row: 6 / 11;
     z-index: 3;
-    scale: 4;
+    scale: 6;
     position: relative;
-    bottom: 50px;
+    top: 150px;
     left: 30px;
   }
   
@@ -152,9 +153,9 @@
     width: 70%;
     margin-top: 20%;
     justify-self: center;
-    scale: 8;
+    scale: 9;
     position: relative;
-    bottom: 100px;
+    top: px;
 
   }
   
@@ -191,8 +192,8 @@
     z-index: 4;
     position: relative;
     rotate: 180deg;
-    scale: 4;
-    left: 90px;
+    scale: 5;
+    left: px;
     bottom: 50px;
   }
   
