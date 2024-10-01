@@ -1,3 +1,15 @@
+body,
+html{ 
+    overflow: auto;
+}
+
+.Mini-Titles{
+ display: flex;
+ justify-content: space-between;
+ font-size: xx-small;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
 h1{
  font-family: Arial, Helvetica, sans-serif;
  display: grid;
@@ -17,7 +29,8 @@ a:link{
     justify-content: space-between;
     
 
-  }
+}
+
   
 
 
