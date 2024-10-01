@@ -16,6 +16,14 @@ html{
  color: black;
 }
 
+.navigation{
+    display: flex;
+ justify-content: center;
+ font-size: xx-small;
+ 
+
+
+}
 
 h1{
  font-family: Arial, Helvetica, sans-serif;
