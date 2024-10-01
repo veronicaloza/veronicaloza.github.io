@@ -1,6 +1,7 @@
 body,
 html {
   overflow: hidden;
+
 }
 
 .container {
@@ -17,7 +18,7 @@ html {
 }
 
 .scrolling-text .scrolling-text-content {
-  color: white;
+  color: black;
   font-size: 120px;
   font-family:Helvetica;
   white-space: nowrap;
@@ -28,6 +29,7 @@ html {
 }
 
 #strokeme1 {
-  color: transparent;
-  text-shadow: -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
+  text-shadow: -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
 }
