@@ -14,8 +14,9 @@ a:link{
 
 .row {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     
+
   }
   
 
