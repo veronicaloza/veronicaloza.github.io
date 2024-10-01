@@ -1,33 +1,34 @@
-.grid-container{ 
-    display: grid;
-    grid-template-columns: repeat (4,1fr);
-    grid-gap: 10px;
-    grid-template-areas: 
-    "image1 image1 image1 image1"
-    "text text text text"
-}
-
-.image1{ 
-  grid-area: image1;
-}
- 
-img {
-    max-width: 30%;
-    height: auto;
-}
-
 h1{
  font-family: Arial, Helvetica, sans-serif;
- position: center;
  display: grid;
  place-items: center;
 
 }
 
 a:link{
-    text-decoration: none;
     color: black;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
 }
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.image1{
+  
+}
+
+
+
+
+
