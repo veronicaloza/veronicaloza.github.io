@@ -4,15 +4,36 @@ background: radial-gradient(#6c8cb0, #d2c0b5);
 }
 
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "sedgwick-ave-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
     display: flex;
     justify-content: center;
-    letter-spacing: 75px;
+    letter-spacing: 0px;
     transition: 1s;
+    color:white;
+
 
 }
 
 h1:hover{
-    letter-spacing: -20px;
+    letter-spacing: 100px;
+    color:#6c8cb0;
+    font-size: 80px;
 }
 
+.line-1{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.Mini-Titles{
+    display: flex;
+    justify-content: space-between;
+    font-size: xx-small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+   }
