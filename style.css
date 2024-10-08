@@ -1,9 +1,10 @@
 body,
 html{ 
     overflow: auto;
-    background-image: url(plate.jpg);
+    background-image: url(Images/plate.jpg);
     background-size:cover;
-    background-position:center;
+    background-position:
+
     
 
 }
@@ -20,7 +21,7 @@ html{
     display: flex;
  justify-content: center;
  font-size: xx-small;
- 
+ font-family: Arial, Helvetica, sans-serif ;
 
 
 }
