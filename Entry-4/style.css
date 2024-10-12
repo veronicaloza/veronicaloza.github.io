@@ -29,16 +29,9 @@ h1:hover{
 
 }
 
-.hide-seashell:hover span.punction{
-    font-size: 100px;
-}
-
 .hide-seashell:hover span{
     opacity:0;
 }
-
-
-
 
 
 
