@@ -1,0 +1,19 @@
+.interactive-navigation{
+    text-decoration:none;
+    display:flex;
+    justify-content: space-between;
+    font-size: xx-small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color:aquamarine;
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+    font-family: "salo-variable", sans-serif;
+    font-variation-settings: "opsz" 1;
+}
+
+
+
