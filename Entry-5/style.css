@@ -1,0 +1,56 @@
+h1{
+    font-family: "podium-soft-variable", sans-serif;
+    font-variation-settings: "wdth" 100;
+    letter-spacing: 10px;
+}
+
+hr {
+    border: 1px dotted black;
+    border-style: none none dotted; 
+    color: #fff; 
+    background-color: #fff;
+    
+}
+
+img{
+    position:relative;
+    top: 0px;
+    left: 30px;
+    max-width: 100%;
+    width:100px;
+    transform: rotate(90deg);
+}
+
+#fibonacci{
+    transform: rotate(240deg);
+    display:none;
+}
+
+@media screen and (max-width: 900px){
+
+    h1{
+        color:#FFF4C5;
+        letter-spacing: 5px;
+
+    }
+
+    hr{
+        color:#FFF4C5;
+    }
+
+    body{
+        background-color:black;
+    }
+
+    #seashell{
+        display:none;
+    }
+
+    #fibonacci{
+        display:block;
+    }
+}
+
+
+
+
