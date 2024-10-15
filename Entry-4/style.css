@@ -1,6 +1,6 @@
 body,html{
     background-color: #F7F6EB;
-    cursor: zoom-in;
+    cursor: none;
 }
 .interactive-navigation{
     display:flex;
@@ -51,7 +51,7 @@ h1{
 }
 
 .facts{
-    color:
+    color:#FF855A
 }
 .about{
     font-family: "nicholas", sans-serif;
@@ -70,9 +70,6 @@ h1{
 .first-line{
     text-align: justify;
     line-height: 0.01;
-}
-
-.first-line:hover {
     cursor: url('first-line-cursor.png'), auto;
 }
 
@@ -90,5 +87,23 @@ h1{
 }
 
 .all-selected-a{
-
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
 }
+
+.second-line{
+    text-align: justify;
+    line-height: 0.01;
+    cursor: url(second-line-cursor.png), auto;
+}
+
+.third-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(third-line-cursor.png), auto;
+}
+
+
+
