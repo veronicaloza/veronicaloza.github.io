@@ -21,6 +21,7 @@ h1{
     font-family: "salo-variable", sans-serif;
     font-variation-settings: "opsz" 1;
     color: #382020;
+    
 }
 
 .number{
@@ -42,6 +43,7 @@ h1{
     font-family: "gridlite-pe-variable", sans-serif;
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 1, "wght" 450;
     transition: 1s;
+    font-size: 3rem;
 }
 
 .groundbreaking:hover{
@@ -54,7 +56,7 @@ h1{
     font-style: normal;
 }
 
-.seashells{
+.seashells-parent-hover{
     font-family: "erotica-big", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -62,6 +64,29 @@ h1{
     color: #A5B7E5;
 }
 
+.first-line{
+    text-align: justify;
+    line-height: 0.01;
+}
+
+.first-line:hover{
+    cursor:url(first-line-cursor.png);
+}
+
+.first-scentence{
+    font-family: "gridlite-pe-variable", sans-serif;
+    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 200, "wght" 450;
+    font-size:2rem;
+    transition:1s;
+}
+
+.first-scentence:hover{
+    font-family: "gridlite-pe-variable", sans-serif;
+    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 600, "wght" 450;
+    font-size:2rem;
+}
+
+.
 
 
 
