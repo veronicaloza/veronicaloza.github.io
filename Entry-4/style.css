@@ -50,6 +50,9 @@ h1{
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
 }
 
+.facts{
+    color:
+}
 .about{
     font-family: "nicholas", sans-serif;
     font-weight: 700;
@@ -69,8 +72,8 @@ h1{
     line-height: 0.01;
 }
 
-.first-line:hover{
-    cursor:url(first-line-cursor.png);
+.first-line:hover {
+    cursor: url('first-line-cursor.png'), auto;
 }
 
 .first-scentence{
@@ -86,10 +89,6 @@ h1{
     font-size:2rem;
 }
 
-.
+.all-selected-a{
 
-
-
-
-
-
+}
