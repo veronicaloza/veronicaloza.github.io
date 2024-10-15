@@ -82,7 +82,7 @@ h1{
 
 .first-scentence:hover{
     font-family: "gridlite-pe-variable", sans-serif;
-    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 600, "wght" 450;
+    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
     font-size:2rem;
 }
 
@@ -90,7 +90,6 @@ h1{
     font-family: "margarita", sans-serif;
     font-weight: 400;
     font-style: normal;
-    transition:1s;
     opacity:1;
     font-size: 3rem;
 }
@@ -104,7 +103,6 @@ h1{
     font-style: normal;
     font-size: 1rem;
     opacity:1;
-    transition:0.5s;
 }
 
 .all-selected-a:hover{
@@ -200,5 +198,22 @@ h1{
     display:flex;
     justify-content: center;
     letter-spacing: 20px;
+}
 
+.fullscreen-image{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('metalic-water.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.hover-text:hover .fullscreen-image{
+    opacity:1;
 }
