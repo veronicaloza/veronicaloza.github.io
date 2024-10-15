@@ -278,7 +278,9 @@ h5 a{
 .hover-text{
     display:flex;
     justify-content: center;
-    letter-spacing: 20px;
+    letter-spacing: px;
+    color:red;
+    opacity:1;
 }
 
 .fullscreen-image{
@@ -295,6 +297,11 @@ h5 a{
     z-index: 0;
 }
 
+.hover-text:hover{
+    opacity:0;
+}
+
 .hover-text:hover .fullscreen-image{
     opacity:1;
 }
+
