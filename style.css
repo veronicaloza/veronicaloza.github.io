@@ -1,9 +1,12 @@
 body,
 html{ 
     overflow: auto;
+    
+}
+
+.background-image{
     background-image: url(Images/plate.jpg);
     background-size:cover;
-    background-position:
 }
 
 .Mini-Titles{
@@ -41,9 +44,3 @@ a:link{
     display: flex;
     justify-content: space-between;
 }
-
-  
-
-
-
-
