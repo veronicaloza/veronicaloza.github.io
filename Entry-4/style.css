@@ -1,6 +1,6 @@
 body,html{
     background-color: #F7F6EB;
-    cursor: none;
+    cursor: zoom-in;
 }
 .interactive-navigation{
     display:flex;
@@ -86,15 +86,33 @@ h1{
     font-size:2rem;
 }
 
+.isnt{
+    font-family: "margarita", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition:1s;
+    opacity:1;
+    font-size: 3rem;
+}
+
+.isnt:hover{
+    opacity:0;
+}
 .all-selected-a{
     font-family: "dazzle-unicase", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1rem;
+    opacity:1;
+    transition:0.5s;
+}
+
+.all-selected-a:hover{
+    opacity:0;
 }
 
 .second-line{
-    text-align: justify;
+    
     line-height: 0.01;
     cursor: url(second-line-cursor.png), auto;
 }
@@ -105,5 +123,82 @@ h1{
     cursor: url(third-line-cursor.png), auto;
 }
 
+.fourth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(fourth-line-cursor.png), auto;
+}
+
+.fifth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(fifth-line-cursor.png), auto;
+}
+
+.sixth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(sixth-line-cursor.png), auto;
+}
+
+.seventh-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(seventh-line-cursor.png), auto;
+}
+
+.eighth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(eigth-line-cursor.png), auto;
+}
+
+.ninth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(first-line-cursor.png), auto;
+}
+
+.tenth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(second-line-cursor.png), auto;
+}
+
+.eleventh-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(third-line-cursor.png), auto;
+}
+
+.twelfth-line{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(fourth-line-cursor.png), auto;
+}
+
+.line-thirteen{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(fifth-line-cursor.png), auto;
+}
+
+.line-fourteen{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(sixth-line-cursor.png), auto;
+}
+
+.line-fifteenth{
+    text-align:justify;
+    line-height:0.01;
+    cursor: url(seventh-line-cursor.png), auto;
+}
 
 
+.hover-text{
+    display:flex;
+    justify-content: center;
+    letter-spacing: 20px;
+
+}
