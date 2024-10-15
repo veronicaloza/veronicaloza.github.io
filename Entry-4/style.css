@@ -37,8 +37,6 @@ body,html{
 
 
 
-
-
 .interactive-navigation{
     display:flex;
     justify-content: space-between;
@@ -59,6 +57,12 @@ h1{
     font-variation-settings: "opsz" 1;
     color: #382020;
     
+}
+
+h5 a{
+    text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#FF855A;
 }
 
 .number{
