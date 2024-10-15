@@ -84,6 +84,7 @@ h1{
     font-family: "gridlite-pe-variable", sans-serif;
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
     font-size:2rem;
+    color:#FF855A
 }
 
 .isnt{
@@ -97,20 +98,59 @@ h1{
 .isnt:hover{
     opacity:0;
 }
+
+.tiny-font{
+    font-family: "glammo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 .all-selected-a{
     font-family: "dazzle-unicase", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1rem;
-    opacity:1;
+    
 }
 
 .all-selected-a:hover{
-    opacity:0;
+    font-family: "gridlite-pe-variable", sans-serif;
+    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
+    font-size:4rem;
+    color:#382020;
 }
 
+.portable{
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #A5B7E5;
+}
+
+.portable:hover{
+    font-family: "gridlite-pe-variable", sans-serif;
+    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
+    font-size:4rem;
+    color:#382020;
+}
+
+.the{
+    font-family: "narkiss-hadash-extended", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:2rem;
+}
+
+.the:hover{
+    font-family: "gridlite-pe-variable", sans-serif;
+    font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
+    font-size:3rem;
+    color:#382020;
+}
+
+
+
 .second-line{
-    
     line-height: 0.01;
     cursor: url(second-line-cursor.png), auto;
 }
