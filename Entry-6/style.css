@@ -3,8 +3,22 @@
     
 }
 
+.lightstroke{
+    font-family: "nicholas", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .body-text{
+    position:absolute;
+    top:100px;
+    left: 250px;
     color:whitesmoke;
+    font-family: "nicholas", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 2rem;
 }
 
 .titles{
@@ -21,6 +35,20 @@
     color:whitesmoke;
 }
 
-.titles .{
-    color:blue;
+img{
+    position: absolute;
+    top:150px;
+    right:200px;
+    max-width:100%;
+    width:400px;
+    filter:blur(6px);
+    transition-duration: 2s;
+}
+
+img:hover{
+    filter:blur(0px);
+}
+
+.short-text{
+    color:whitesmoke;
 }
