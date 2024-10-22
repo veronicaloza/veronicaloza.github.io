@@ -92,6 +92,20 @@ h5 a{
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
 }
 
+.ivyora{
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2rem;
+    color:#382020;
+    transition: 1s;
+}
+
+.ivyora:hover{
+    color:#FF855A
+    
+}
+
 .facts{
     color:#FF855A
 }
@@ -305,5 +319,6 @@ h5 a{
 .hover-text:hover .fullscreen-image{
     opacity:1;
 }
+
 
 
