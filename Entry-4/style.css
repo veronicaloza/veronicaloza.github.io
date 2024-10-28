@@ -1,5 +1,5 @@
 body,html{
-    background-color: #F7F6EB;
+    background-color: whitesmoke;
     cursor: zoom-in;
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ body,html{
 
 .interactive-navigation a{
     text-decoration:none;
-    color: #A5B7E5;
+    color: black;
 }
 
 h1{
@@ -55,14 +55,14 @@ h1{
     justify-content: center;
     font-family: "salo-variable", sans-serif;
     font-variation-settings: "opsz" 1;
-    color: #382020;
+    color: black;
     
 }
 
 h5 a{
     text-decoration:none;
     font-family: Arial, Helvetica, sans-serif;
-    color:#FF855A;
+    color: black;
 }
 
 .number{
@@ -70,13 +70,13 @@ h5 a{
     font-weight: 400;
     font-style: normal;
     font-size: 5rem;
-    color: #A5B7E5;
+    color: black;
     transition: 1s;
 }
 
 .number:hover{
     font-size: 2rem;
-    color:  #382020 ;
+    color:  black ;
     cursor: zoom-out;
     
 }
@@ -97,17 +97,17 @@ h5 a{
     font-weight: 100;
     font-style: normal;
     font-size: 2rem;
-    color:#382020;
+    color:#000000;
     transition: 1s;
 }
 
 .ivyora:hover{
-    color:#FF855A
+    color:black
     
 }
 
 .facts{
-    color:#FF855A
+    color:black
 }
 .about{
     font-family: "nicholas", sans-serif;
@@ -120,7 +120,7 @@ h5 a{
     font-weight: 400;
     font-style: normal;
     font-size: 5rem;
-    color: #A5B7E5;
+    color: black;
 }
 
 .first-line{
@@ -140,7 +140,7 @@ h5 a{
     font-family: "gridlite-pe-variable", sans-serif;
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
     font-size:2rem;
-    color:#FF855A
+    color:black
 }
 
 .isnt{
@@ -173,7 +173,7 @@ h5 a{
     font-family: "gridlite-pe-variable", sans-serif;
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
     font-size:4rem;
-    color:#382020;
+    color: black;
 }
 
 .portable{
@@ -181,14 +181,14 @@ h5 a{
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
-    color: #A5B7E5;
+    color: black;
 }
 
 .portable:hover{
     font-family: "gridlite-pe-variable", sans-serif;
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
     font-size:4rem;
-    color:#382020;
+    color: black;
 }
 
 .the{
@@ -202,7 +202,7 @@ h5 a{
     font-family: "gridlite-pe-variable", sans-serif;
     font-variation-settings: "ELSH" 3, "RECT" 1, "BACK" 900, "wght" 450;
     font-size:3rem;
-    color:#382020;
+    color: black;
 }
 
 .second-line{
@@ -293,7 +293,7 @@ h5 a{
     display:flex;
     justify-content: center;
     letter-spacing: px;
-    color:red;
+    color:black;
     opacity:1;
 }
 
