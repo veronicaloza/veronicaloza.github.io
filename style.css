@@ -1,12 +1,14 @@
 body,
 html{ 
     overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
 }
 
 .background-image{
     background-image: url(Images/plate.jpg);
-    
+
 }
 
 .Mini-Titles{
