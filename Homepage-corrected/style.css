@@ -10,13 +10,14 @@ html{
  justify-content: space-between;
  font-size: xx-small;
  font-family: Arial, Helvetica, sans-serif;
- color: black;
+ color: rgb(168, 150, 142);
 }
 
 .navigation{
     display: flex;
     justify-content: center;
-    font-size: 2rem;;
+    color: rgb(168, 150, 142);
+    font-size: 2rem;
     font-family: "erotica-big", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -37,32 +38,96 @@ h1{
     max-width: 100%;
     width: 150vw;
     height: 150vh;
+
 }
 
 img{
-    filter: grayscale(100%);
-    transition: 0.5s;
+    /*filter: grayscale(100%);
+    transition: 0.5s;*/
+    cursor: url(Images/fork.png), auto;
 }
 
 img:hover{
     filter:grayscale(0%);
-
 }
 
-.firstentry{
-    position:relative;
-    max-width: 100vw;
-    top:450px;
-    left:300px;
-    object-fit:contain;
-    transform:rotate(40deg);
-}
 
 #first{
     max-width: 100%;
-    width:500px;
+    width:200px;
+    position:relative;
+    top:150px;
+    left:500px;
+    transform:rotate(50deg);
 }
 
+#second{
+    max-width:100%;
+    width:180px;
+    position:relative;
+    bottom:-50px;
+    left:300px;
+    transform:rotate(-40deg);
+}
 
+#third{
+    max-width:100%;
+    width:250px;
+    position:relative;
+    height:auto;
+    top:-50px;
+    right:-600px;
+    transform: rotate(30deg);
+}
+
+#fourth{
+    max-width: 100%;
+    width:250px;
+    position:relative;
+    height:auto;
+    top:-330px;
+    left:300px;
+    transform:rotate(60deg);
+}
+
+#fifth{
+    max-width:100%;
+    height:auto;
+    width:120px;
+    position:relative;
+    top:-650px;
+    right:-500px;
+    transform:rotate(-25deg);
+}
+
+#sixth{
+    max-width:100%;
+    height:auto;
+    width:200px;
+    position:relative;
+    top:-1125px;
+    right:-700px;
+    transform: rotate(100deg);
+}
+
+#seventh{
+    max-width:100%;
+    height:auto;
+    width:100px;
+    position:relative;
+    top:-1200px;
+    right:-580px;
+    transform:rotate(25deg);
+}
+
+#eight{
+    max-width:100%;
+    height:auto;
+    width:100px;
+    position:relative;
+    top:-1300px;
+    right:-900px;
+
+}
 
 
