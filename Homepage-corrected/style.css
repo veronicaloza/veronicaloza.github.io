@@ -42,13 +42,14 @@ h1{
 }
 
 img{
-    /*filter: grayscale(100%);
-    transition: 0.5s;*/
+    filter: grayscale(100%);
+    transition: 0.5s;
     cursor: url(Images/fork.png), auto;
 }
 
 img:hover{
     filter:grayscale(0%);
+    box-shadow:10px 10px 20px;
 }
 
 
@@ -127,7 +128,36 @@ img:hover{
     position:relative;
     top:-1300px;
     right:-900px;
+}
 
+#nine{
+    max-width:100%;
+    height:auto;
+    width:125px;
+    position:relative;
+    top:-1320px;
+    right:-900px;
+    transform:rotate(-130deg)
+}
+
+#ten{
+    max-width:100%;
+    height:auto;
+    width:200px;
+    position:relative;
+    top:-1375px;
+    right:-700px;
+    transform:rotate(-125deg)
+}
+
+#eleven{
+    max-width:100%;
+    height:auto;
+    width:100px;
+    position:relative;
+    top:-1460px;
+    right:-600px;
+    transform:rotate(-125deg)
 }
 
 
