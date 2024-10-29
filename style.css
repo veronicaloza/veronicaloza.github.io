@@ -6,10 +6,7 @@ html{
     cursor: url(Images/fork.png), auto;
 }
 
-.background-image{
-    background-image: url(Images/plate.jpg);
 
-}
 
 .Mini-Titles{
  display: flex;
@@ -55,7 +52,7 @@ a:link{
 
 .column{
     filter:grayscale(100%);
-    transition: 1s;
+    transition: 0.5s;
 
 }
 
