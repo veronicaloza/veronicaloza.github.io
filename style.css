@@ -4,6 +4,10 @@ html{
     cursor: url(Images/fork.png), auto;
 }
 
+.background-image{
+    background-image: url(Images/plate.jpg);
+    
+}
 
 .Mini-Titles{
  display: flex;
