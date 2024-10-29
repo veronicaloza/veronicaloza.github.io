@@ -1,13 +1,9 @@
 body,
 html{ 
     overflow: auto;
-    
+    cursor: url(Images/fork.png), auto;
 }
 
-.background-image{
-    background-image: url(Images/plate.jpg);
-    background-size:cover;
-}
 
 .Mini-Titles{
  display: flex;
@@ -26,7 +22,6 @@ html{
     font-style: normal;
 }
 
-
 h1{
  font-family: Arial, Helvetica, sans-serif;
  display: grid;
@@ -39,9 +34,25 @@ a:link{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
+    text-decoration: none;
+    cursor: url(Images/fork.png), auto;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
+}
+
+.subheadings{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.column{
+    filter:grayscale(100%);
+    transition: 1s;
+
+}
+
+.column:hover{
+    filter:grayscale(0%);
 }
