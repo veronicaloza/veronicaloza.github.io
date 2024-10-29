@@ -18,7 +18,7 @@ html {
 }
 
 .scrolling-text .scrolling-text-content {
-  color: black;
+  color: white;
   font-size: 120px;
   font-family:Helvetica;
   white-space: nowrap;
@@ -30,6 +30,6 @@ html {
 
 #strokeme1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:white;
-  text-shadow: -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
+  color:black;
+  text-shadow: -0.5px 0 whitesmoke, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
 }

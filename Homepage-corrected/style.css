@@ -4,19 +4,18 @@ html{
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
+    background-color: black;
 }
 .Mini-Titles{
  display: flex;
  justify-content: space-between;
  font-size: xx-small;
  font-family: Arial, Helvetica, sans-serif;
- color: rgb(168, 150, 142);
 }
 
 .navigation{
     display: flex;
     justify-content: center;
-    color: rgb(168, 150, 142);
     font-size: 2rem;
     font-family: "erotica-big", sans-serif;
     font-weight: 400;

@@ -4,6 +4,7 @@ html{
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
+    background-color: black;
 
 }
 .Mini-Titles{
@@ -11,13 +12,13 @@ html{
  justify-content: space-between;
  font-size: xx-small;
  font-family: Arial, Helvetica, sans-serif;
- color: brown;
+ color: white;
 }
 
 .navigation{
     display: flex;
     justify-content: center;
-    color: brown;
+    color: white;
     font-size: 2rem;
     font-family: "erotica-big", sans-serif;
     font-weight: 400;
@@ -39,7 +40,6 @@ h1{
     max-width: 100%;
     width: 150vw;
     height: 150vh;
-
 }
 
 img{
@@ -51,6 +51,14 @@ img{
 img:hover{
     filter:grayscale(100%);
 }
+
+@media screen and (max-width: 900px){
+
+    .entry img{
+        width:70%;
+    }
+}
+    
 
 
 #first{
@@ -159,5 +167,6 @@ img:hover{
     right:-600px;
     transform:rotate(-125deg)
 }
+
 
 
