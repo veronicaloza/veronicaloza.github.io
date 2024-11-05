@@ -18,11 +18,14 @@ html{
 .navigation{
     display: flex;
     justify-content: center;
-    color: white;
     font-size: 2rem;
-    font-family: "erotica-big", sans-serif;
+    font-family: "parlare", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    ont-style: normal;
+    background: -webkit-linear-gradient(#ffffff, #ff96796b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 h1{
@@ -40,6 +43,8 @@ h1{
     max-width: 100%;
     width: 150vw;
     height: 150vh;
+    background-color: red;
+    position: relative;
 }
 
 img{
@@ -52,21 +57,12 @@ img:hover{
     filter:grayscale(100%);
 }
 
-@media screen and (max-width: 900px){
-
-    .entry img{
-        width:70%;
-    }
-}
-    
-
-
 #first{
     max-width: 100%;
     width:200px;
-    position:relative;
-    top:150px;
-    left:500px;
+    position:absolute;
+    /* top:150px;
+    left:500px; */
     transform:rotate(50deg);
 }
 
@@ -168,5 +164,7 @@ img:hover{
     transform:rotate(-125deg)
 }
 
-
+.boxcontainer{
+    background-color: whitesmoke;
+}
 
