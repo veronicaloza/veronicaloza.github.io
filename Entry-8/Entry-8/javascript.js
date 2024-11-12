@@ -1,5 +1,3 @@
-Alert("Refresh Page for More Textures!");
-
 let images = ['ocean-waves.jpg', 'fish.jpeg', 'ripple.jpeg'];
 
 console.log(images);
