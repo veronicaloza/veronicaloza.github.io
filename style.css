@@ -59,10 +59,10 @@ img:hover{
 
 #first{
     max-width: 100%;
-    width:200px;
+    width:10%;
     position:absolute;
-    /* top:150px;
-    left:500px; */
+    top:30%;
+    left:30%;
     transform:rotate(50deg);
 }
 

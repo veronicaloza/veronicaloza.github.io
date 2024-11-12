@@ -14,8 +14,6 @@ html, body{
 
 }
 
-
-
 .catalog{
     display:flex;
     width:250px;
@@ -33,7 +31,7 @@ html, body{
 }
 
 .catalog:hover{
-    background-color: aquamarine;
+    background-color: #9B8384;
     color:whitesmoke;
 }
 
@@ -58,17 +56,16 @@ html, body{
 
 .heading{
     display:flex;
-    width: 500px;
+    width: 450px;
     height:40px;
     background:;
-    box-shadow: 0 0 0 0.5px black;
     color:black;
-    font-family: "dazzle-unicase", sans-serif;
+    font-family: ;
     font-weight: 200;
     font-style: normal;
     font-size: 24px;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: last baseline;
 }
 
 .cart{
