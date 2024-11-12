@@ -1,0 +1,69 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.rectangle {
+    height: 100px;
+    width: 200px;
+    background-image: url('ocean-waves.jpg');
+    background-position: bottom left;
+    position: relative;
+    bottom: 100px;
+}
+
+.sea {
+    font-family: "jacquarda-bastarda-9", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.body-text {
+    font-style: italic;
+    color: #010A26;
+
+}
+
+.first-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.first-container {
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+}
+
+.wavy-line {
+    position: relative;
+    bottom: 290px;
+    left: 445px;
+    background-image: url(ocean-waves.jpg);
+    background-position: left;
+
+    --s: 30px;
+    /* size of the wave */
+    --b: 16px;
+    /* thickness of the line */
+    --m: 0.4;
+    /* curvature of the wave [0 2] */
+    --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+    height: calc(2*var(--R));
+    width: 15%;
+    --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+    mask:
+        radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+        radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)), var(--_g)) 50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+}
