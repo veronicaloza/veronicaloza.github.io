@@ -19,5 +19,5 @@ let palette = ['#163655', '#401E01', '#D9C3B0', '#F2F2F2'];
 
 sea.style.color = palette[Math.floor(Math.random() * palette.length)];
 
-
+// alert("Refresh Page for More Visual Texture"); // 
 
