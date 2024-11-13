@@ -12,15 +12,6 @@ body {
     background-size: 40px 40px;
 }
 
-.rectangle {
-    height: 100px;
-    width: 200px;
-    background-image: url('ocean-waves.jpg');
-    background-position: bottom left;
-    position: relative;
-    bottom: 100px;
-}
-
 .sea {
     font-family: "jacquarda-bastarda-9", sans-serif;
     font-weight: 400;
@@ -30,26 +21,91 @@ body {
 .body-text {
     font-style: italic;
     color: #010A26;
-
 }
 
 .first-line {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 6rem;
     text-transform: uppercase;
 }
 
 .first-container {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     gap: 50px;
 }
 
+.second-container {
+    display: flex;
+}
+
+.second-body-text {
+    margin-top: -150px;
+    text-transform: uppercase;
+}
+
+.second-line {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 6rem;
+    color: #010A26;
+}
+
+.calm {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+.calm:hover {
+    color: #F2F2F2;
+    transition-duration: 2s;
+    letter-spacing: 5px;
+}
+
+.deep {
+    display: inline-block;
+    /* Necessary for transform effects */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+    transition-duration: 2s;
+}
+
+.deep:hover {
+    transform: scaleY(10);
+    /* Stretch vertically */
+}
+
+.container {
+    display: flex;
+    justify-content: right;
+    gap: 200px;
+}
+
+.container-two {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.rectangle {
+    height: 100px;
+    width: 100px;
+    background-image: url('ocean-waves.jpg');
+    background-position: bottom left;
+    position: relative;
+    bottom: 200px;
+    left: 430px;
+    border-radius: 100%;
+    border: 0.5px solid black;
+
+}
+
+
 .wavy-line {
     position: relative;
-    bottom: 290px;
-    left: 445px;
+    bottom: 460px;
+    left: 620px;
     background-image: url(ocean-waves.jpg);
     background-position: left;
 
@@ -66,4 +122,25 @@ body {
     mask:
         radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
         radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)), var(--_g)) 50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+}
+
+.rectangle-two {
+    position: relative;
+    bottom: 280px;
+    left: 680px;
+    width: 300px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 40px;
+    /* Round corners */
+    clip-path: inset(0 0 0 0 round 40px);
+    /* Adjust to control rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bread.jpeg);
+    background-position: bottom right;
+    transform: rotate(90deg);
 }
