@@ -1,23 +1,28 @@
-let images = ['ocean-waves.jpg', 'fish.jpeg', 'ripple.jpeg', 'Michael Kukla.jpeg', 'bread.jpeg'];
+setInterval(animateRandomness, 1000);
 
-console.log(images);
+function animateRandomness() {
 
-let rectangle = document.getElementById('rectangle');
+    let images = ['ocean-waves.jpg', 'fish.jpeg', 'ripple.jpeg', 'Michael Kukla.jpeg', 'bread.jpeg'];
 
-let wave = document.getElementById('wavy-line');
+    console.log(images);
 
-let sea = document.getElementById('sea');
+    let rectangle = document.getElementById('rectangle');
 
-let secondrectangle = document.getElementById('rectangletwo')
+    let wave = document.getElementById('wavy-line');
 
-rectangle.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
+    let sea = document.getElementById('sea');
 
-wave.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
-rectangletwo.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
+    let secondrectangle = document.getElementById('rectangletwo')
 
-let palette = ['#163655', '#401E01', '#D9C3B0', '#F2F2F2'];
+    rectangle.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
 
-sea.style.color = palette[Math.floor(Math.random() * palette.length)];
+    wave.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
+    rectangletwo.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
 
-// alert("Refresh Page for More Visual Texture"); // 
+    let palette = ['#163655', '#401E01', '#D9C3B0', '#F2F2F2'];
 
+    sea.style.color = palette[Math.floor(Math.random() * palette.length)];
+
+    // alert("Refresh Page for More Visual Texture"); // 
+
+}

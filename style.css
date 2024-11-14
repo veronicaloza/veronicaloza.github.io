@@ -102,9 +102,9 @@ img:hover {
     height: auto;
     width: 10%;
     position: absolute;
-    top: 30%;
-    left: 60%;
-    transform: rotate(165deg);
+    top: 32%;
+    left: 58%;
+    transform: rotate(230deg);
 }
 
 #seventh {
@@ -112,47 +112,48 @@ img:hover {
     height: auto;
     width: 10%;
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 50%;
-    transform: rotate(25deg);
+    transform: rotate(-50deg);
 }
 
 #eight {
     max-width: 100%;
     height: auto;
-    width: 15%;
+    width: 12%;
     position: absolute;
-    top: ;
-    right: ;
+    top: 60%;
+    right: 38%;
+    transform: rotate(45deg);
 }
 
 #nine {
     max-width: 100%;
     height: auto;
-    width: 125px;
-    position: relative;
-    top: -1320px;
-    right: -900px;
+    width: 5%;
+    position: absolute;
+    top: 42%;
+    right: 25%;
     transform: rotate(-130deg)
 }
 
 #ten {
     max-width: 100%;
     height: auto;
-    width: 200px;
-    position: relative;
-    top: -1375px;
-    right: -700px;
+    width: 5%;
+    position: absolute;
+    top: 25%;
+    left: 35%;
     transform: rotate(-125deg)
 }
 
 #eleven {
     max-width: 100%;
     height: auto;
-    width: 100px;
-    position: relative;
-    top: -1460px;
-    right: -600px;
+    width: 7%;
+    position: absolute;
+    top: 70%;
+    left: 40%;
     transform: rotate(-125deg)
 }
 

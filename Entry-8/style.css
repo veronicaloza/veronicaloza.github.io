@@ -97,6 +97,7 @@ body {
     bottom: 200px;
     left: 430px;
     border-radius: 100%;
+    transition: 0.3s;
 
 }
 
@@ -105,6 +106,7 @@ body {
     position: relative;
     bottom: 460px;
     left: 620px;
+    transition: 0.2s;
     background-image: url(ocean-waves.jpg);
     background-position: left;
 
@@ -142,4 +144,5 @@ body {
     background-image: url(bread.jpeg);
     background-position: bottom right;
     transform: rotate(90deg);
+    transition: 0.3s;
 }
