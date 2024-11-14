@@ -1,170 +1,161 @@
 body,
-html{ 
+html {
     overflow: auto;
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
-    background-color: black;
-
-}
-.Mini-Titles{
- display: flex;
- justify-content: space-between;
- font-size: xx-small;
- font-family: Arial, Helvetica, sans-serif;
- color: white;
+    background-color: white;
 }
 
-.navigation{
+.Mini-Titles {
+    display: flex;
+    justify-content: space-between;
+    font-size: xx-small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.navigation {
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    font-family: "parlare", sans-serif;
-    font-weight: 400;
-    ont-style: normal;
-    background: -webkit-linear-gradient(#ffffff, #ff96796b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
 
 }
 
-h1{
- font-family: Arial, Helvetica, sans-serif;
- display: grid;
- place-items: center;
-
-}
-
-.coverimage{
+.coverimage {
     background-image: url(Images/plate.png);
-    background-size:contain;
-    background-repeat: no-repeat; 
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     max-width: 100%;
     width: 150vw;
     height: 150vh;
-    background-color: red;
     position: relative;
 }
 
-img{
+img {
     filter: grayscale(0%);
     transition: 0.5s;
     cursor: url(Images/fork.png), auto;
 }
 
-img:hover{
-    filter:grayscale(100%);
+img:hover {
+    filter: grayscale(100%);
 }
 
-#first{
+#first {
     max-width: 100%;
-    width:10%;
-    position:absolute;
-    top:30%;
-    left:30%;
-    transform:rotate(50deg);
+    width: 15%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: rotate(50deg);
 }
 
-#second{
-    max-width:100%;
-    width:180px;
-    position:relative;
-    bottom:-50px;
-    left:300px;
-    transform:rotate(-40deg);
+#second {
+    max-width: 100%;
+    width: 10%;
+    position: absolute;
+    bottom: 35%;
+    left: 25%;
+    transform: rotate(-40deg);
 }
 
-#third{
-    max-width:100%;
-    width:250px;
-    position:relative;
-    height:auto;
-    top:-50px;
-    right:-600px;
+#third {
+    max-width: 100%;
+    width: 20%;
+    position: absolute;
+    top: 35%;
+    right: 45%;
     transform: rotate(30deg);
 }
 
-#fourth{
+#fourth {
     max-width: 100%;
-    width:250px;
-    position:relative;
-    height:auto;
-    top:-330px;
-    left:300px;
-    transform:rotate(60deg);
+    width: 10%;
+    position: absolute;
+    height: auto;
+    top: 25%;
+    left: 40%;
+    transform: rotate(60deg);
 }
 
-#fifth{
-    max-width:100%;
-    height:auto;
-    width:120px;
-    position:relative;
-    top:-650px;
-    right:-500px;
-    transform:rotate(-25deg);
+#fifth {
+    max-width: 100%;
+    height: auto;
+    width: 10%;
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: rotate(-25deg);
 }
 
-#sixth{
-    max-width:100%;
-    height:auto;
-    width:200px;
-    position:relative;
-    top:-1125px;
-    right:-700px;
-    transform: rotate(100deg);
+#sixth {
+    max-width: 100%;
+    height: auto;
+    width: 10%;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: rotate(165deg);
 }
 
-#seventh{
-    max-width:100%;
-    height:auto;
-    width:100px;
-    position:relative;
-    top:-1200px;
-    right:-580px;
-    transform:rotate(25deg);
+#seventh {
+    max-width: 100%;
+    height: auto;
+    width: 10%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: rotate(25deg);
 }
 
-#eight{
-    max-width:100%;
-    height:auto;
-    width:100px;
-    position:relative;
-    top:-1300px;
-    right:-900px;
+#eight {
+    max-width: 100%;
+    height: auto;
+    width: 15%;
+    position: absolute;
+    top: ;
+    right: ;
 }
 
-#nine{
-    max-width:100%;
-    height:auto;
-    width:125px;
-    position:relative;
-    top:-1320px;
-    right:-900px;
-    transform:rotate(-130deg)
+#nine {
+    max-width: 100%;
+    height: auto;
+    width: 125px;
+    position: relative;
+    top: -1320px;
+    right: -900px;
+    transform: rotate(-130deg)
 }
 
-#ten{
-    max-width:100%;
-    height:auto;
-    width:200px;
-    position:relative;
-    top:-1375px;
-    right:-700px;
-    transform:rotate(-125deg)
+#ten {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    position: relative;
+    top: -1375px;
+    right: -700px;
+    transform: rotate(-125deg)
 }
 
-#eleven{
-    max-width:100%;
-    height:auto;
-    width:100px;
-    position:relative;
-    top:-1460px;
-    right:-600px;
-    transform:rotate(-125deg)
+#eleven {
+    max-width: 100%;
+    height: auto;
+    width: 100px;
+    position: relative;
+    top: -1460px;
+    right: -600px;
+    transform: rotate(-125deg)
 }
 
-.boxcontainer{
+.boxcontainer {
     background-color: whitesmoke;
 }
-
