@@ -1,4 +1,4 @@
-setInterval(animateRandomness, 1000);
+setInterval(animateRandomness, 1500);
 
 function animateRandomness() {
 
