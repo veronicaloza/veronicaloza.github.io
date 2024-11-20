@@ -27,30 +27,23 @@ function animateRandomness() {
 
 }
 
+// Get the current hour
 let currentHour = new Date().getHours();
 
-let Q = document.getElementById("Q");
+// Get references to the maintenance and content elements
+let maintenanceDiv = document.getElementById("maintenance");
+let contentDiv = document.getElementById("content");
 
-if (currentHour > 19 || currentHour <= 19) {
-    Q.innerHTML = "Grab Some Coffee! It's time to Grind!";
+// Show maintenance message during specified hours
+if (currentHour >= 17 && currentHour <= 22) {
+    maintenanceDiv.style.display = "flex"; // Show maintenance
+    contentDiv.style.display = "none"; // Hide website content
 } else {
-    Q.innerHTML = "Why aren't you working on HW!"
+    maintenanceDiv.style.display = "none"; // Hide maintenance
+    contentDiv.style.display = "block"; // Show website content
 }
 
-let body = document.body;
 
-if (currentHour > 6 && currentHour < 19) {
-
-    body.style.backgroundColor = "#ffffff";
-
-} else if (currentHour > 19 && currentHour < 22) {
-
-    body.style.backgroundColor = "blue";
-} else {
-
-    body.style.backgroundColor = "black";
-
-}
 
 
 
