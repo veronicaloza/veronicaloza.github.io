@@ -1,103 +1,41 @@
-html, body{
-    background-color: whitesmoke;
+html,
+body {
+    background-image: url(Paper\ texture.jpeg);
+    background-size: cover;
+    max-height: auto;
 }
 
-.top-bar{
-    position:fixed;
-    top:0px;
-    left:0px;
+.linkedtitles {
+    display: flex;
+    justify-content: space-between;
 }
 
-.search-panel{
-    display:flex;
-    align-items: center;
-
+.linkedtitles a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
 }
 
-.catalog{
-    display:flex;
-    width:250px;
-    height:40px;
-    background: #E8E7E7;
-    color:rgb(0, 0, 0);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 0 0 0.5px black;
-    font-size: x-small;
-    font-family: "dazzle-unicase", sans-serif;
-    font-weight: 200;
-    font-style: normal;
+.flex-box {
+    display: flex;
 }
 
-.catalog:hover{
-    background-color: #9B8384;
-    color:whitesmoke;
+.first img {
+    max-width: auto;
+    max-height: 150px;
+    transition: 1s;
 }
 
-.search-bar{
-    display:flex;
-    width:250px;
-    height:40px;
-    background:#E8E7E7;
-    box-shadow: 0 0 0 0.5px black;
-    color:black;
-    justify-content: center;
-    font-size: x-small ;
-    align-items: center;
-    text-align: center;
-    transition-duration: 1s;
+.first img:hover {
+    opacity: 0;
 }
 
-.search-bar:hover{
-    background-color: #9B8384;
-    color:whitesmoke;
+.second img {
+    max-width: auto;
+    max-height: 150px;
+    transition: 1s;
 }
 
-.heading{
-    display:flex;
-    width: 450px;
-    height:40px;
-    background:;
-    color:black;
-    font-family: ;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 24px;
-    justify-content:center;
-    align-items: last baseline;
+.second img:hover {
+    opacity: 0;
 }
-
-.cart{
-    display:flex;
-    width:250px;
-    height:40px;
-    background:#E8E7E7;
-    box-shadow: 0 0 0 0.5px black;
-    color:black;
-    justify-content: center;
-    font-size: x-small ;
-    align-items: center;
-    text-align: center;
-    font-family: "dazzle-unicase", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-
-.account{
-    display:flex;
-    width:250px;
-    height:40px;
-    background:#E8E7E7;
-    box-shadow: 0 0 0 0.5px black;
-    color:black;
-    justify-content: center;
-    font-size: x-small ;
-    align-items: center;
-    text-align: center;
-    font-family: "dazzle-unicase", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-
-
