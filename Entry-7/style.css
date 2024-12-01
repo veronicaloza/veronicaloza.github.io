@@ -154,7 +154,7 @@ h1 {
     }
 
     25% {
-        transform: translate(14px, 14px) rotate(14deg);
+        transform: translate(14px, 14px) rotate(12deg);
     }
 
     50% {
@@ -169,7 +169,7 @@ h1 {
     }
 
     25% {
-        transform: translate(16px, 16px) rotate(16deg);
+        transform: translate(16px, 16px) rotate(12deg);
     }
 
     50% {
@@ -184,7 +184,7 @@ h1 {
     }
 
     25% {
-        transform: translate(18px, 18px) rotate(18deg);
+        transform: translate(18px, 18px) rotate(12deg);
     }
 
     50% {
