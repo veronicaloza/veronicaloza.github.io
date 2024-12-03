@@ -11,17 +11,20 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/deh8sie.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="background">
-        <div class="content">
-            <h1>100 BACKGROUNDS</h1>
-            <p>MODERN—COLORFUL</p>
-            <button>ABSTRACT GRADIENTS</button>
-        </div>
-    </div>
+    <h1>How bad are your hallucinations?</h1>
+
+    <input type="range" id="blurSlider" min="0" max="50" value="0" oninput="blurText()">
+
+    <!-- ADD SLIDER HERE -->
+
+    <h2 id="alert">See a doctor!</h2>
+
+    <p id="text"></p>
 
 
 

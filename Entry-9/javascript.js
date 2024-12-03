@@ -1,11 +1,11 @@
 let currentHour = new Date().getHours();
 
 // Check if the current time is between 19 (7 PM) and 22 (10 PM)
-if (currentHour >= 19 && currentHour <= 22) {
+if (currentHour >= 1 && currentHour <= 4) {
     // Allow the website to work
     document.body.innerHTML = `
-        <h1>Welcome to the Website!</h1>
-        <p>It's the right time to access this site. Enjoy your stay!</p>`;
+        <h1>Welcome to the Website!</h1>`;
+
 } else {
     // Display an error message or redirect
     document.body.innerHTML = `

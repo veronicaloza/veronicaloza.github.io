@@ -1,52 +1,40 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Times New Roman', serif;
+body {
+    background: rgb(205, 195, 146);
+    background: radial-gradient(circle, rgba(205, 195, 146, 1) 6%, rgba(48, 76, 137, 1) 33%, rgba(158, 183, 229, 1) 48%, rgba(232, 229, 218, 1) 100%);
+    background-attachment: fixed;
+    backdrop-filter: blur(100%);
 }
 
-.background {
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(249, 176, 80, 0.9), rgba(238, 129, 183, 0.7), rgba(169, 155, 146, 0.6));
-    filter: blur(20px);
-    position: absolute;
-    z-index: -1;
-}
-
-.content {
+h1,
+h2 {
+    font-size: 2rem;
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
+    color: #4962EA;
 }
 
-p {
-    font-size: 1.2rem;
-    margin: 0.8rem 0;
+#text {
+    width: 800px;
+    margin: auto;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    color: transparent;
+    text-shadow: 0 0 0px rgba(0, 0, 0);
 }
 
-button {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 0.8rem 2rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+input[type=range] {
+    display: block;
+    margin: 20px auto;
+    width: 500px;
 }
 
-button:hover {
-    background: rgba(255, 255, 255, 0.8);
-    color: #000;
+#alert {
+    color: red;
+    display: none;
 }
