@@ -124,7 +124,7 @@ h1 {
     }
 
     25% {
-        transform: translate(10px, 10px) rotate(10deg);
+        transform: translate(10px, 10px) rotate(8deg);
     }
 
     50% {
@@ -139,7 +139,7 @@ h1 {
     }
 
     25% {
-        transform: translate(12px, 12px) rotate(12deg);
+        transform: translate(12px, 12px) rotate(8deg);
     }
 
     50% {
@@ -154,7 +154,7 @@ h1 {
     }
 
     25% {
-        transform: translate(14px, 14px) rotate(12deg);
+        transform: translate(14px, 14px) rotate(8deg);
     }
 
     50% {
@@ -169,7 +169,7 @@ h1 {
     }
 
     25% {
-        transform: translate(16px, 16px) rotate(12deg);
+        transform: translate(16px, 16px) rotate(8deg);
     }
 
     50% {
@@ -184,7 +184,7 @@ h1 {
     }
 
     25% {
-        transform: translate(18px, 18px) rotate(12deg);
+        transform: translate(18px, 18px) rotate(8deg);
     }
 
     50% {
@@ -302,6 +302,21 @@ h1 {
     animation: tilt-shaking-sixth-coloumn 2s ease-in-out 2.5s infinite;
 }
 
+.sixteen img {
+    max-width: auto;
+    max-height: 150px;
+    transition: ease-in-out 0.5s;
+    animation: tilt-shaking-sixth-coloumn 2s ease-in-out 2.6s infinite;
+}
+
+.seventeen img {
+    max-width: auto;
+    max-height: 150px;
+    transition: ease-in-out 0.5s;
+    animation: tilt-shaking-sixth-coloumn 2s ease-in-out 2.7s infinite;
+}
+
+
 .cursor {
     pointer-events: none;
     position: fixed;
@@ -313,7 +328,7 @@ h1 {
 }
 
 .first:hover~.cursor {
-    transform: translate(-50%, -50%) scale(8);
+    transform: translate(-50%, -50%) scale(10);
 }
 
 .second:hover~.cursor {
@@ -369,5 +384,13 @@ h1 {
 }
 
 .fifteen:hover~.cursor {
+    transform: translate(-50%, -50%) scale(8);
+}
+
+.sixteen:hover~.cursor {
+    transform: translate(-50%, -50%) scale(8);
+}
+
+.seventeen:hover~.cursor {
     transform: translate(-50%, -50%) scale(8);
 }

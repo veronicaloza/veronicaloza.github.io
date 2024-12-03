@@ -136,8 +136,8 @@ body {
 
 .rectangle-two {
     position: relative;
-    bottom: 280px;
-    left: 690px;
+    bottom: 0px;
+    left: 0px;
     width: 300px;
     /* Adjust width as needed */
     height: 100px;
