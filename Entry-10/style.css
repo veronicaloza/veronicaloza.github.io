@@ -39,6 +39,12 @@ p {
 
 }
 
+.email {
+    position: relative;
+    left: 0px;
+    color: rgb(168, 36, 36);
+}
+
 #seashells {
     height: 100vh;
     height: 500px;
