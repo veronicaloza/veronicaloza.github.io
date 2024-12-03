@@ -1,110 +1,152 @@
-h1{
+h1 {
     font-family: "podium-soft-variable", sans-serif;
     font-variation-settings: "wdth" 100;
     letter-spacing: 10px;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 hr {
     border: 1px dotted black;
-    border-style: none none dotted; 
-    color: #fff; 
+    border-style: none none dotted;
+    color: #fff;
     background-color: #fff;
-    
+
 }
 
-img{
-    position:relative;
+img {
+    position: relative;
     top: 0px;
     left: 30px;
     max-width: 100%;
-    width:100px;
+    width: 100px;
     transform: rotate(90deg);
 }
 
-#fibonacci{
+#fibonacci {
     transform: rotate(240deg);
-    display:none;
+    display: none;
 }
 
-#second-seashell{
-    position:absolute;
+#second-seashell {
+    position: absolute;
     left: 170px;
     top: 90px;
     transform: rotate(360deg);
     max-width: 100%;
     width: 100px;
 }
-  
-#second-shell-bw{
-    position:absolute;
-    transform: rotate(360deg);
-    max-width:100%;
-    width:80px;
-    left:190px;
-    top:80px;
-    display:none;
-} 
 
-#paragraph-top-right{
+#second-shell-bw {
+    position: absolute;
+    transform: rotate(360deg);
+    max-width: 100%;
+    width: 80px;
+    left: 190px;
+    top: 80px;
+    display: none;
+}
+
+#paragraph-top-right {
     position: absolute;
     width: 100px;
     height: 400px;
     margin: auto;
-    right:190px;
+    right: 190px;
     top: 80px;
 }
 
-.climate-change-para{
+#third-seashell {
+    position: absolute;
+    width: 100px;
+    margin: auto;
+    right: 100px;
+    top: 600px;
+}
+
+#third-bw {
+    position: absolute;
+    width: 100px;
+    margin: auto;
+    right: 100px;
+    top: 600px;
+    display: none;
+}
+
+#third-colorfull {
+    position: absolute;
+    width: 100px;
+    margin: auto;
+    right: 100px;
+    top: 600px;
+    display: none;
+}
+
+
+.climate-change-para {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-small;
-    text-align:right;
+    text-align: right;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
 
-    h1{
-        color:#FFF4C5;
+    h1 {
+        color: #FFF4C5;
         letter-spacing: 5px;
 
     }
 
-    hr{
-        color:#FFF4C5;
+    hr {
+        color: #FFF4C5;
     }
 
-    body{
-        background-color:black;
+    body {
+        background-color: black;
     }
 
-    #seashell{
-        display:none;
+    #seashell {
+        display: none;
     }
 
-    #fibonacci{
-        display:block;
+    #fibonacci {
+        display: block;
     }
 
-    #second-seashell{
-        display:none;
+    #second-seashell {
+        display: none;
     }
 
-    #second-shell-bw{
-        display:block;
+    #second-shell-bw {
+        display: block;
     }
 
-    .climate-change-para{
-        color:#FFF4C5;
+    #third-seashell {
+        display: none;
+    }
+
+    #third-bw {
+        display: block;
+    }
+
+    .climate-change-para {
+        color: #FFF4C5;
     }
 
 
 }
 
+@media screen and (max-width: 600px) {
+
+    #third-colorfull {
+        display: block;
+    }
+
+    #third-bw {
+        display: none;
+    }
 
 
 
-
-
-
+}
