@@ -19,7 +19,9 @@ html {
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "erotica-big", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h1 {
@@ -159,4 +161,32 @@ img:hover {
 
 .boxcontainer {
     background-color: whitesmoke;
+}
+
+
+footer {
+    padding: 20px;
+    /* Adds padding inside the footer */
+    text-align: center;
+    /* Centers all text inside the footer */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Sets a clean font */
+    font-size: 1rem;
+    /* Sets a default font size */
+}
+
+/* Targets all <p> elements inside the footer */
+footer p {
+    color: #482900;
+    margin: 10px 0;
+    /* Adds vertical spacing between paragraphs */
+    line-height: 1.6;
+}
+
+/* Targets specific styles for the second <p> */
+footer p:last-of-type {
+    font-weight: bold;
+    /* Makes the last paragraph bold */
+    color: #555;
+    /* Slightly lighter text color */
 }
