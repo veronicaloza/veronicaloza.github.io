@@ -1,40 +1,51 @@
 body {
-    background: rgb(205, 195, 146);
-    background: radial-gradient(circle, rgba(205, 195, 146, 1) 6%, rgba(48, 76, 137, 1) 33%, rgba(158, 183, 229, 1) 48%, rgba(232, 229, 218, 1) 100%);
-    background-attachment: fixed;
-    backdrop-filter: blur(100%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(6, 1, 20);
+
 }
 
-h1,
-h2 {
-    font-size: 2rem;
-    font-family: "erotica-big", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+main {
     text-align: center;
-    text-transform: uppercase;
+
+
 }
 
 h1 {
-    color: #4962EA;
+    font-family: "jacquarda-bastarda-9", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+
 }
 
-#text {
-    width: 800px;
-    margin: auto;
-    font-size: 28px;
-    letter-spacing: -0.01em;
-    color: transparent;
-    text-shadow: 0 0 0px rgba(0, 0, 0);
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: whitesmoke;
 }
 
-input[type=range] {
-    display: block;
-    margin: 20px auto;
-    width: 500px;
+p {
+    color: whitesmoke;
+    font-size: 1em;
+    margin-bottom: 1em;
+    max-width: 600px;
+    line-height: 1.6;
 }
 
-#alert {
-    color: red;
-    display: none;
+#first {
+    height: 100%;
+    height: 100px;
+    float: left;
+    position: absolute;
+    bottom: 400px;
+    left: 250px;
+
 }
