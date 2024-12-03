@@ -4,6 +4,7 @@ body {
     background-size: cover;
     max-height: auto;
     cursor: none;
+    overflow-x: hidden;
 }
 
 hr {
@@ -22,7 +23,7 @@ h1 {
     font-family: "erotica-big", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 4rem;
     color: rgb(43, 0, 255);
     display: flex;
     justify-content: center;
@@ -31,6 +32,11 @@ h1 {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    color: grey;
 }
 
 .linkedtitles {
@@ -40,7 +46,6 @@ p {
 }
 
 .linkedtitles a {
-    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: blue;
     cursor: none;
@@ -48,10 +53,12 @@ p {
 }
 
 .flex-box {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 .first img {
