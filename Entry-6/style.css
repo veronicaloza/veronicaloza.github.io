@@ -1,22 +1,24 @@
-.body, html{
+.body,
+html {
     background-color: black;
+    overflow-x: hidden;
 }
 
-.img{
-    opacity:0.5;
+.img {
+    opacity: 0.5;
 }
 
-.lightstroke{
+.lightstroke {
     font-family: "nicholas", sans-serif;
     font-weight: 600;
     font-style: normal;
 }
 
-.body-text{
-    position:relative;
-    top:100px;
+.body-text {
+    position: relative;
+    top: 100px;
     left: 250px;
-    color:whitesmoke;
+    color: whitesmoke;
     font-family: "nicholas", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -24,40 +26,59 @@
     line-height: 2rem;
 }
 
-.titles{
-    color:whitesmoke;
-    display:flex;
+.titles {
+    color: whitesmoke;
+    display: flex;
     justify-content: space-between;
-    font-size: x-small;
+    font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.titles a{
-    display:block;
+.titles a {
+    display: block;
     text-decoration: none;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
-#first-image{
+#first-image {
     position: absolute;
-    top:150px;
-    right:160px;
-    max-width:100%;
-    width:500px;
-    filter:blur(6px);
+    top: 150px;
+    right: 160px;
+    max-width: 100%;
+    width: 500px;
+    filter: blur(6px);
     transition-duration: 2s;
 }
 
-#first-image:hover{
-    filter:blur(0px);
+#first-image:hover {
+    filter: blur(0px);
 }
 
-.short-text{
-    color:whitesmoke;
+
+#second {
+    position: relative;
+    bottom: -120px;
+
+}
+
+.short-text {
+    position: absolute;
+    text-align: center;
+    top: 1000px;
+    right: 50%%;
+    width: 100vw;
+    color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: x-small;
+    font-size: small;
     text-align: justify;
+    transition: 3s;
 }
 
+.short-text span {
+    font-size: x-large;
+    transition: 3s;
+}
 
-
+.short-text:hover span {
+    opacity: 0;
+}
