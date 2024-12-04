@@ -6,13 +6,22 @@ h1 {
     justify-content: center;
 }
 
-hr {
-    border: 1px dotted black;
-    border-style: none none dotted;
-    color: #fff;
-    background-color: #fff;
+.titles {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titles a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor: url(fork.png), auto;
 
 }
+
 
 img {
     position: relative;
@@ -134,6 +143,10 @@ img {
         color: #FFF4C5;
     }
 
+    .titles a {
+        color: whitesmoke;
+    }
+
 
 }
 
@@ -147,6 +160,20 @@ img {
         display: none;
     }
 
+    .titles a {
+        color: red;
+    }
+
+    .climate-change-para {
+
+        color: #ff0000;
+    }
+
+    h1 {
+        color: #ff03ea;
+        letter-spacing: 5px;
+
+    }
 
 
 }

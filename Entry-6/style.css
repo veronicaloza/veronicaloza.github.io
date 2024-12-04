@@ -38,6 +38,8 @@ html {
     display: block;
     text-decoration: none;
     color: whitesmoke;
+    cursor: url(images/fork.png), auto;
+
 }
 
 #first-image {
