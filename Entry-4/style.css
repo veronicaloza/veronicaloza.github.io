@@ -42,14 +42,16 @@ html {
 .interactive-navigation {
     display: flex;
     justify-content: space-between;
-    font-size: xx-small;
+    font-size: small;
     font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
+    cursor: url(Images/fork.png), auto;
 }
 
 .interactive-navigation a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 16, 245);
+    cursor: url(Images/fork.png), auto;
+
 }
 
 h1 {
