@@ -29,7 +29,7 @@ function draw() {
         // Draw symmetrical lines
         for (let i = 0; i < symmetry; i++) {
             rotate(angle); // Rotate for each symmetry section
-            stroke(0); // Set stroke color
+            stroke(999); // Set stroke color
             strokeWeight(2); // Set stroke weight
             line(lineStartX, lineStartY, lineEndX, lineEndY); // Draw the line
 

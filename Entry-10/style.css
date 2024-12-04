@@ -13,6 +13,22 @@ body {
 
 }
 
+.titles {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titles a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor: url(fork.png), auto;
+
+}
+
 h1 {
     font-family: "parlare", sans-serif;
     font-weight: 400;
