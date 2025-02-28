@@ -15,13 +15,20 @@ html {
     color: black;
 }
 
-.navigation {
+.mini-titles-container {
     display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    font-family: "erotica-big", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: palevioletred;
 }
 
 h1 {
@@ -37,8 +44,9 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     max-width: 100%;
-    width: 150vw;
-    height: 150vh;
+    width: 200vw;
+    height: 200vh;
+    margin-top: -15em;
     position: relative;
 }
 

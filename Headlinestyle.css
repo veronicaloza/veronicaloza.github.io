@@ -7,14 +7,14 @@ html {
 .container {
   position: relative;
   width: 100vw;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .scrolling-text {
   display: inline-block;
-  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.5);
   will-change: transform;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
 }
 
 .scrolling-text .scrolling-text-content {
@@ -22,9 +22,11 @@ html {
   font-size: 120px;
   font-family: Helvetica;
   white-space: nowrap;
+  word-spacing: 5px;
+  letter-spacing: -2px;
   transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
   line-height: 0.8em;
-  margin: 0px;
+  margin: 5px;
 
 }
 
@@ -32,4 +34,11 @@ html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   text-shadow: -0.5px 0 #010A26, 0.5px -0.5px 0 #010A26, -0.5px 0.5px 0 #010A26, 0.5px 0.5px 0#010A26;
+}
+
+#cursive {
+  font-family: "erotica-big", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  ;
 }
