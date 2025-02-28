@@ -18,7 +18,7 @@ html {
 .mini-titles-container {
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 500px;
 }
 
 .underline {
@@ -28,7 +28,7 @@ html {
 
 a {
     text-decoration: none;
-    color: palevioletred;
+    color: black;
 }
 
 h1 {
@@ -39,14 +39,14 @@ h1 {
 }
 
 .coverimage {
-    background-image: url(Images/plate.png);
+    background-image: url(Images/plate.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     max-width: 100%;
     width: 200vw;
     height: 200vh;
-    margin-top: -15em;
+    margin-top: -8em;
     position: relative;
 }
 

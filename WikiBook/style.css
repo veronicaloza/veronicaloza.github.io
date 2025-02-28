@@ -1,0 +1,37 @@
+body,
+html {
+    overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    cursor: url(Images/fork.png), auto;
+    background-color: white;
+}
+
+.Mini-Titles {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.mini-titles-container {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
