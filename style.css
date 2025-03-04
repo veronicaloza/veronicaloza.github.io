@@ -9,10 +9,13 @@ html {
 
 .Mini-Titles {
     display: flex;
+
     justify-content: space-between;
     font-size: small;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    background-color: white;
+    width: 100vw;
 }
 
 .mini-titles-container {
