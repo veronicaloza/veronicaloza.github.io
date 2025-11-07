@@ -9,6 +9,7 @@ html {
 
 .Mini-Titles {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     font-size: small;
     font-family: Arial, Helvetica, sans-serif;
