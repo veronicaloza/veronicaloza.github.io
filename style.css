@@ -1,0 +1,117 @@
+body,
+html {
+    overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    cursor: url(Images/fork.png), auto;
+    background-color: white;
+}
+
+.Mini-Titles {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+    width: 100vw;
+}
+
+.mini-titles-container {
+    display: flex;
+    color: #000000;
+    margin-right: 70px;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.header {
+    margin-top: 3rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+
+}
+
+img {
+    filter: grayscale(0%);
+    transition: 0.5s;
+    cursor: url(Images/fork.png), auto;
+}
+
+.boxcontainer {
+    background-color: whitesmoke;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.archive {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry {
+    width: 800px;
+    height: 500px;
+
+    border-radius: 10px;
+}
+
+#one {
+    background-image: url("thumbnails/home_publication.jpg");
+    background-size: cover;
+}
+
+#two {
+    background-image: url("thumbnails/social_campaign.png");
+    background-size: cover;
+}
+
+#three {
+    background-image: url("thumbnails/glowgirl.png");
+    background-size: cover;
+}
+
+#four {
+    background-image: url("thumbnails/qrcode.png");
+    background-size: cover;
+}
+
+#five {
+    background-image: url("thumbnails/highline.png");
+    background-size: cover;
+}
+
+#six {
+    background-image: url("thumbnails/flower_store.png");
+    background-size: cover;
+}
+
+#categorySelect {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    position: fixed;
+    top: 220px;
+    right: 60px;
+}
