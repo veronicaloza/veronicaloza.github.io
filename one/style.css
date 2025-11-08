@@ -1,0 +1,96 @@
+body,
+html {
+    overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    cursor: url(Images/fork.png), auto;
+    background-color: white;
+}
+
+.Mini-Titles {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+    width: 100vw;
+}
+
+.mini-titles-container {
+    display: flex;
+    color: #000000;
+    margin-right: 75px;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.header {
+    margin-top: 3rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+
+}
+
+
+.horizontal-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: inherit;
+    width: 100vw;
+    padding: 1rem;
+    margin-top: 10rem;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-scroll-container {
+    scrollbar-width: none;
+}
+
+.item {
+    flex: 0 0 auto;
+    min-width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    scroll-snap-align: start;
+
+}
+
+#one {
+    background-image: url(images/one.jpg);
+    background-size: cover;
+}
+
+#two {
+    background-image: url(images/two.jpg);
+    background-size: cover;
+
+}
+
+#three {
+    background-image: url(images/three.png);
+    background-size: cover;
+
+}
