@@ -81,16 +81,39 @@ h1 {
 #one {
     background-image: url(images/one.jpg);
     background-size: cover;
+    background-position: center center;
 }
 
 #two {
-    background-image: url(images/two.jpg);
+    background-image: url(images/animation.gif);
     background-size: cover;
-
+    background-position: center center;
 }
 
 #three {
-    background-image: url(images/three.png);
-    background-size: cover;
+    background-image: url(images/two.jpg);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
+#four {
+    background-image: url(images/three.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#five {
+    background-image: url(images/4.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#six {
+    background-image: url(images/5.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
 }

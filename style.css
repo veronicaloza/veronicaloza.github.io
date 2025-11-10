@@ -70,12 +70,43 @@ img {
 .entry {
     width: 800px;
     height: 500px;
-    border-radius: 10px;
+}
+
+
+/* Styles for viewports 768px and wider (tablets and desktops) */
+@media (min-width: 768px) {
+    .entry {
+        width: 650px;
+        height: 400px;
+    }
+
+    .archive {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 6rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Styles for viewports 1024px and wider (laptops and desktops) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
 }
 
 #one {
     background-image: url("thumbnails/home_publication.jpg");
     background-size: cover;
+    background-position: center center;
+    /* Centers the image */
 }
 
 #two {
@@ -90,7 +121,8 @@ img {
 
 #four {
     background-image: url("thumbnails/qrcode.png");
-    background-size: cover;
+    background-size: 100% auto;
+    background-position: center center;
 }
 
 #five {
@@ -123,16 +155,4 @@ img {
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
 
-}
-
-@media (max-width: 1440px) {
-    .archive {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 7rem;
-        justify-content: center;
-        align-items: center;
-    }
 }
