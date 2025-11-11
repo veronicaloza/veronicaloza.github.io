@@ -4,7 +4,7 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .Mini-Titles {
@@ -13,14 +13,14 @@ html {
     justify-content: space-between;
     font-size: small;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: #333333;
 
     width: 100vw;
 }
 
 .mini-titles-container {
     display: flex;
-    color: #000000;
+    color: #333333;
     margin-right: 75px;
     justify-content: space-between;
     width: 300px;
@@ -36,13 +36,6 @@ a {
     color: black;
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    place-items: center;
-
-}
-
 
 .horizontal-scroll-container {
     display: flex;
@@ -52,7 +45,7 @@ h1 {
     scroll-behavior: inherit;
     width: 100vw;
     padding: 1rem;
-    margin-top: 10rem;
+    margin-top: 15rem;
     border-radius: 12px;
     gap: 10px;
 }
@@ -75,7 +68,6 @@ h1 {
     font-size: 1.4rem;
     font-weight: bold;
     scroll-snap-align: start;
-
 }
 
 #one {
@@ -116,4 +108,22 @@ h1 {
     background-size: 90% auto;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.description {
+    display: flex;
+    gap: 300px;
+    position: fixed;
+    top: 8rem;
+}
+
+#titles {
+    color: #333333;
+    line-height: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+}
+
+.column {
+    flex: 1;
 }

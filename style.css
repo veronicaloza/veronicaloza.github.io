@@ -4,42 +4,40 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .Mini-Titles {
     display: flex;
     position: fixed;
+    top: 0px;
     justify-content: space-between;
-    font-size: small;
+    font-size: Medium;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: #333333;
     width: 100vw;
+    background-color: whitesmoke;
+    height: 40px;
+    border-bottom: 0.5px solid #333333;
+    z-index: 1;
 }
 
 .mini-titles-container {
     display: flex;
-    color: #000000;
-    margin-right: 75px;
-    justify-content: space-between;
-    width: 300px;
+    color: #333333;
+    position: fixed;
+    right: 10px;
+    font-style: italic;
 }
 
 .header {
-    margin-top: 3rem;
-}
-
-
-a {
-    text-decoration: none;
-    color: black;
+    margin-top: 3.5rem;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     place-items: center;
-
 }
 
 img {
@@ -63,8 +61,6 @@ img {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 7rem;
-    justify-content: center;
-    align-items: center;
 }
 
 .entry {
@@ -72,26 +68,23 @@ img {
     height: 500px;
 }
 
-
-/* Styles for viewports 768px and wider (tablets and desktops) */
 @media (min-width: 768px) {
     .entry {
-        width: 650px;
-        height: 400px;
+        aspect-ratio: 16 / 9;
+        width: 45%;
     }
 
     .archive {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 5rem;
         margin-top: 6rem;
         justify-content: center;
         align-items: center;
     }
 }
 
-/* Styles for viewports 1024px and wider (laptops and desktops) */
 @media (min-width: 1024px) {
     body {
         font-size: 20px;
@@ -106,7 +99,6 @@ img {
     background-image: url("thumbnails/home_publication.jpg");
     background-size: cover;
     background-position: center center;
-    /* Centers the image */
 }
 
 #two {
@@ -138,15 +130,18 @@ img {
 #categorySelect {
     width: 100px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    color: #3333333;
+    padding: 0px 7px 0px 7px;
 }
+
 
 .subtitles {
     display: flex;
     justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 3rem;
     align-items: center;
+    margin-top: -10px;
 }
 
 
