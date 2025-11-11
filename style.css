@@ -30,6 +30,12 @@ html {
     font-style: italic;
 }
 
+#selected-works {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: Medium;
+}
+
 .header {
     margin-top: 3.5rem;
 }
@@ -71,14 +77,14 @@ img {
 @media (min-width: 768px) {
     .entry {
         aspect-ratio: 16 / 9;
-        width: 45%;
+        width: 50%;
     }
 
     .archive {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 5rem;
+        gap: 1rem;
         margin-top: 6rem;
         justify-content: center;
         align-items: center;
@@ -132,8 +138,10 @@ img {
     height: 30px;
     border-radius: 50px;
     background-color: whitesmoke;
-    color: #3333333;
     padding: 0px 7px 0px 7px;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: Medium;
 }
 
 

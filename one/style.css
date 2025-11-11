@@ -10,21 +10,26 @@ html {
 .Mini-Titles {
     display: flex;
     position: fixed;
+    top: 0px;
     justify-content: space-between;
-    font-size: small;
+    font-size: Medium;
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
-
     width: 100vw;
+    background-color: whitesmoke;
+    height: 40px;
+    border-bottom: 0.5px solid #333333;
+    z-index: 1;
 }
 
 .mini-titles-container {
     display: flex;
     color: #333333;
-    margin-right: 75px;
-    justify-content: space-between;
-    width: 300px;
+    position: fixed;
+    right: 10px;
+    font-style: italic;
 }
+
 
 .header {
     margin-top: 3rem;
@@ -115,6 +120,7 @@ a {
     gap: 300px;
     position: fixed;
     top: 8rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #titles {
