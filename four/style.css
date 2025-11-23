@@ -1,0 +1,135 @@
+body,
+html {
+    overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    cursor: url(Images/fork.png), auto;
+    background-color: whitesmoke;
+}
+
+.Mini-Titles {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    justify-content: space-between;
+    font-size: Medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    width: 100vw;
+    background-color: whitesmoke;
+    height: 40px;
+    border-bottom: 0.5px solid #333333;
+    z-index: 1;
+}
+
+.mini-titles-container {
+    display: flex;
+    color: #333333;
+    position: fixed;
+    right: 10px;
+    font-style: italic;
+}
+
+
+.header {
+    margin-top: 3rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.horizontal-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: inherit;
+    width: 100vw;
+    padding: 1rem;
+    margin-top: 15rem;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-scroll-container {
+    scrollbar-width: none;
+}
+
+.item {
+    flex: 0 0 auto;
+    min-width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    scroll-snap-align: start;
+}
+
+#one {
+    background-image: url(images/2.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+#two {
+    background-image: url(images/Animation.gif);
+    background-size: cover;
+    background-position: center center;
+}
+
+#three {
+    background-image: url(images/1.jpg);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#four {
+    background-image: url(images/progression.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#five {
+    background-image: url(images/3.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#six {
+    background-image: url(images/5.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.description {
+    display: flex;
+    gap: 300px;
+    position: fixed;
+    top: 8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#titles {
+    color: #333333;
+    line-height: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+}
+
+.column {
+    flex: 1;
+}

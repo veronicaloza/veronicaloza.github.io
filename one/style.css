@@ -22,6 +22,11 @@ html {
     z-index: 1;
 }
 
+.Mini-Titles :hover {
+    color: greenyellow
+}
+
+
 .mini-titles-container {
     display: flex;
     color: #333333;
@@ -35,12 +40,10 @@ html {
     margin-top: 3rem;
 }
 
-
 a {
     text-decoration: none;
     color: black;
 }
-
 
 .horizontal-scroll-container {
     display: flex;
@@ -49,10 +52,7 @@ a {
     overflow-y: hidden;
     scroll-behavior: inherit;
     width: 100vw;
-    padding: 1rem;
     margin-top: 15rem;
-    border-radius: 12px;
-    gap: 10px;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar {
@@ -65,7 +65,7 @@ a {
 
 .item {
     flex: 0 0 auto;
-    min-width: 800px;
+    width: 800px;
     height: 500px;
     display: flex;
     justify-content: center;
@@ -77,59 +77,91 @@ a {
 
 #one {
     background-image: url(images/one.jpg);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center center;
 }
 
 #two {
     background-image: url(images/animation.gif);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center center;
 }
 
 #three {
     background-image: url(images/two.jpg);
-    background-size: 90% auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #four {
     background-image: url(images/three.png);
-    background-size: 90% auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #five {
     background-image: url(images/4.png);
-    background-size: 90% auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 #six {
     background-image: url(images/5.png);
-    background-size: 90% auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .description {
     display: flex;
-    gap: 300px;
-    position: fixed;
-    top: 8rem;
+    flex-direction: row;
+    top: 6rem;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    align-items: first baseline;
+    width: 80%vw;
+    justify-content: space-between;
+    position: fixed;
+    gap: 100px;
+    padding-left: 50px;
+}
+
+.options a {
+    positon: fixed;
+    top: 6rem;
+    right: 50px;
+    z-index: 1;
+
 }
 
 #titles {
     color: #333333;
-    line-height: 2px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 600px;
+    font-size: small;
+    line-height: 2px;
 }
 
-.column {
-    flex: 1;
+span {
+    font-weight: bold;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+
+#year {
+    width: 300px;
+}
+
+#artbio {
+    width: 700px;
 }

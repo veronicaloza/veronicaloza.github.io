@@ -1,0 +1,224 @@
+body,
+html {
+    overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    cursor: url(Images/fork.png), auto;
+    background-color: whitesmoke;
+}
+
+.Mini-Titles {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    justify-content: space-between;
+    font-size: Medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    width: 100vw;
+    background-color: whitesmoke;
+    height: 40px;
+    border-bottom: 0.5px solid #333333;
+    z-index: 1;
+}
+
+.mini-titles-container {
+    display: flex;
+    color: #333333;
+    position: fixed;
+    right: 10px;
+    font-style: italic;
+}
+
+
+.header {
+    margin-top: 3rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: #370404
+}
+
+
+.horizontal-scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: inherit;
+    width: 100vw;
+    padding: 1rem;
+    margin-top: 15rem;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-scroll-container {
+    scrollbar-width: none;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    scroll-snap-align: start;
+}
+
+#one {
+    background-image: url(images/1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#two {
+    background-image: url(images/2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#three {
+    background-image: url(images/3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#four {
+    background-image: url(images/4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#five {
+    background-image: url(images/29.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#six {
+    background-image: url(images/31.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#seven {
+    background-image: url(images/33.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#eight {
+    background-image: url(images/5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#nine {
+    background-image: url(images/6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#ten {
+    background-image: url(images/9.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#eleven {
+    background-image: url(images/6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#twelve {
+    background-image: url(images/6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#thirteen {
+    background-image: url(images/6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#fourteen {
+    background-image: url(images/6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    top: 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    align-items: first baseline;
+    width: 80%vw;
+    justify-content: space-between;
+    position: fixed;
+    gap: 100px;
+    padding-left: 50px;
+}
+
+.options a {
+    positon: fixed;
+    top: 6rem;
+    right: 50px;
+    z-index: 1;
+
+}
+
+#titles {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    line-height: 2px;
+}
+
+span {
+    font-weight: bold;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+
+#year {
+    width: 300px;
+}
+
+#artbio {
+    width: 700px;
+}
