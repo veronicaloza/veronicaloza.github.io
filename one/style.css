@@ -22,7 +22,7 @@ html {
     top: 0px;
     justify-content: space-between;
     font-size: Medium;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     color: #333333;
     width: 100vw;
     background-color: #F9F9F9;
@@ -54,7 +54,9 @@ a {
 }
 
 .scroll-wrapper {
-    position: relative;
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
     width: 100vw;
     margin-top: 15rem;
     overflow: hidden;
@@ -152,7 +154,7 @@ a {
 
 .description {
     display: flex;
-    top: 6rem;
+    top: 5rem;
     font-family: "Pelikan";
     font-size: small;
     align-items: first baseline;
@@ -160,7 +162,6 @@ a {
     justify-content: space-between;
     position: fixed;
     gap: 100px;
-    padding-left: 50px;
 }
 
 .options a {
@@ -200,6 +201,14 @@ h1 {
 
 #artbio {
     width: 700px;
+}
+
+.footer {
+    color: black;
+    font-family: "Pelikan";
+    letter-spacing: -1px;
+    position: fixed;
+    left: 10px;
 }
 
 @media (max-width: 768px) {
