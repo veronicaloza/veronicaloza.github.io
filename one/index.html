@@ -33,8 +33,8 @@
         <div class="column" id="titles">
             <h1>Home Publication</h1>
             <p>Or a guide to making tea</p>
+            <p span id="date">May 2025</p>
         </div>
-        <div class="column" id="year">Timeline: April to May 2025 <br>Editorial Design</div>
         <div class="column" id="artbio">Home Publication is an editorial piece that navigates the user through the
             process oftea-making with intricate imagery and hidden poetic messgaes throughout the layouts. <br><br>
             Laser
@@ -46,16 +46,22 @@
     </div>
 
 
-    <div class="horizontal-scroll-container">
-        <div class="item" id="one"></div>
-        <div class="item" id="two"></div>
-        <div class="item" id="three"></div>
-        <div class="item" id="four"></div>
-        <div class="item" id="five"></div>
-        <div class="item" id="six"></div>
-    </div>
+    <div class="scroll-wrapper">
+        <div class="horizontal-scroll-container">
+            <div class="item" id="one"></div>
+            <div class="item" id="two"></div>
+            <div class="item" id="three"></div>
+            <div class="item" id="four"></div>
+            <div class="item" id="five"></div>
+            <div class="item" id="six"></div>
+        </div>
 
-    <script src="script.js" async defer></script>
+        <div id="scroll-arrow-overlay">
+            <img id="scroll-arrow-icon" src="../arrow_right.svg" alt="scroll arrow" />
+            <path fill="currentColor"></path>
+        </div>
+
+        <script src="script.js" async defer></script>
 </body>
 
 </html>

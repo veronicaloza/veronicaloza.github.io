@@ -1,0 +1,32 @@
+.Mini-Titles {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    font-size: Medium;
+    font-family: "Pelikan";
+    color: #333333;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 40px;
+    border-bottom: 0.5px solid #333333;
+    z-index: 1;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.contact {
+    padding-top: 3rem;
+}
+
+.contact a {
+    color: #333333;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.contact a:hover {
+    color: yellowgreen;
+}

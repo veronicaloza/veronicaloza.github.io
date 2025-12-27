@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Pelikan';
+    src: url('font/ABCPelikan-Light-Trial.woff2') format('woff2'),
+        url('font/ABCPelikan-Light-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body,
 html {
     overflow: auto;
@@ -26,7 +35,7 @@ html {
     left: 0;
     justify-content: space-between;
     font-size: Medium;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     color: #333333;
     width: 100%;
     background-color: whitesmoke;
@@ -47,7 +56,7 @@ html {
 
 .Mini-Titles a:hover {
     text-decoration: none;
-    color: greenyellow;
+    color: rgb(17, 0, 255);
 }
 
 #info {
@@ -57,8 +66,9 @@ html {
 
 #selected-works {
     color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     font-size: Medium;
+    letter-spacing: -1px;
     transform: rotate(5deg);
 }
 
@@ -93,26 +103,12 @@ img {
 
 }
 
-.contact {
-    padding-top: 3rem;
-}
-
-.contact a {
-    color: #333333;
-    text-decoration: none;
-    font-size: medium;
-}
-
-.contact a:hover {
-    color: yellowgreen;
-}
-
 .archive {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 1rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
     box-sizing: border-box;
 }
 
@@ -178,8 +174,13 @@ img {
 }
 
 #five {
-    background-image: url("thumbnails/highline.png");
+    background-image: url("thumbnails/bookgif.gif");
     background-size: cover;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #101010;
+
 }
 
 #six {
