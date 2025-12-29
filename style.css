@@ -13,13 +13,13 @@ html {
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
 
 ::selection {
-    background-color: greenyellow;
+    background-color: blue;
     color: #333333;
 }
 
