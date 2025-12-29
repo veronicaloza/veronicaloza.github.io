@@ -246,33 +246,59 @@ h1 {
         background-color: #F9F9F9;
     }
 
+    .scroll-wrapper {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 20rem;
+        overflow: visible;
+    }
+
     .horizontal-scroll-container {
         display: flex;
         flex-direction: column;
         width: 100%;
+        overflow-x: visible;
+        align-items: center;
+        gap: 20px;
     }
 
     .item {
         flex: 0 0 auto;
-        width: 80%;
-        height: 100;
+        width: 90%;
+        height: 400px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 1.4rem;
-        font-weight: bold;
-        scroll-snap-align: start;
+        scroll-snap-align: none;
     }
 
     .description {
+        display: flex;
+        flex-direction: column;
         top: 6rem;
         font-family: "Pelikan";
         font-size: small;
-        align-items: first baseline;
-        width: 80%vw;
-        justify-content: space-between;
-        position: fixed;
+        width: 90%;
+        position: relative;
+        gap: 20px;
+        padding: 0 5%;
+    }
+
+    #artbio {
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        left: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    #scroll-arrow-overlay {
+        display: none !important;
     }
 
 }
