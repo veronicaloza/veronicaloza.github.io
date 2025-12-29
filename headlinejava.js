@@ -51,35 +51,13 @@ $(document).ready(function () {
                 } else if (direction === 'right') {
                     return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
                 }
-            };
-
-            // Helper to enforce infinite-loop bounds
-            function checkBounds() {
-                if (transformAmount < leftBound) {
-                    var active = getActiveScrollingText('left');
-                    active.css({
-                        left: Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px'
-                    });
-                    leftBound = parseInt(active.css('left'), 10);
-                    rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
-                }
-                else if (transformAmount > rightBound) {
-                    var active = getActiveScrollingText('right');
-                    active.css({
-                        left: Math.round(
-                            rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent
-                        ) + 'px'
-                    });
-                    rightBound += scrollingTextWidth + startLetterIndent;
-                    leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
-                }
             }
 
-            // 1) WHEEL SCROLL (desktop)
             $(window).on('wheel', function (e) {
                 var delta = e.originalEvent.deltaY;
 
                 if (delta > 0) {
+                    // going down
                     transformAmount += transformSpeed * transformDirection;
                     container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(10deg)');
                 }
@@ -92,56 +70,98 @@ $(document).ready(function () {
                 }, 10);
                 setTimeout(function () {
                     container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(0)');
-                }, 500);
+                }, 500)
 
-                checkBounds();
-            });
+                // Boundaries
+                if (transformAmount < leftBound) {
+                    var activeText = getActiveScrollingText('left');
+                    activeText.css({ 'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px' });
+                    leftBound = parseInt(activeText.css("left"), 10);
+                    rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
 
-            // 2) TOUCH/DRAG SCROLL (mobile)
-            var isDragging = false,
-                startClientX = 0,
-                startTransform = 0;
+                } else if (transformAmount > rightBound) {
+                    var activeText = getActiveScrollingText('right');
+                    activeText.css({ 'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px' });
+                    rightBound += scrollingTextWidth + startLetterIndent;
+                    leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
+                }
 
-            container
-                .on('pointerdown touchstart', function (_e) {
-                    var e = _e.originalEvent.touches ? _e.originalEvent.touches[0] : _e.originalEvent;
-                    isDragging = true;
-                    startClientX = e.clientX;
-                    startTransform = transformAmount;
-                    container.find('.scrolling-text').css('transition', 'none');
-                    _e.preventDefault();
-                })
-                .on('pointermove touchmove', function (_e) {
-                    if (!isDragging) return;
-                    var e = _e.originalEvent.touches ? _e.originalEvent.touches[0] : _e.originalEvent;
-                    _e.preventDefault();
+                // 4) DRAG-TO-SCROLL FOR TOUCH / POINTER
+                var isDragging = false,
+                    startClientX = 0,
+                    startTransform = 0;
 
-                    var dx = startClientX - e.clientX;
-                    transformAmount = startTransform + dx;
-
-                    var skewDir = dx > 0 ? 10 : -10;
-                    container
-                        .find('.scrolling-text .scrolling-text-content')
-                        .css('transform', 'skewX(' + skewDir + 'deg)');
-
-                    container.find('.scrolling-text').css(
-                        'transform',
-                        'translate3d(' + (-transformAmount) + 'px,0,0)'
-                    );
-
-                    checkBounds();
-                })
-                .on('pointerup pointercancel touchend touchcancel', function (_e) {
-                    if (!isDragging) return;
-                    isDragging = false;
-                    container
-                        .find('.scrolling-text .scrolling-text-content')
-                        .css({
-                            transition: 'transform 0.5s cubic-bezier(0.23,0.36,0.28,0.83)',
-                            transform: 'skewX(0)'
+                // helper to re-use your boundary logic
+                function checkBounds() {
+                    if (transformAmount < leftBound) {
+                        var active = getActiveScrollingText('left');
+                        active.css({
+                            left: Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px'
                         });
-                    container.find('.scrolling-text').css('transition', 'transform 0.5s cubic-bezier(0.23,0.36,0.28,0.5)');
-                });
-        });
+                        leftBound = parseInt(active.css('left'), 10);
+                        rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
+                    }
+                    else if (transformAmount > rightBound) {
+                        var active = getActiveScrollingText('right');
+                        active.css({
+                            left: Math.round(
+                                rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent
+                            ) + 'px'
+                        });
+                        rightBound += scrollingTextWidth + startLetterIndent;
+                        leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
+                    }
+                }
+
+                // bind both pointer and touch so it works everywhere
+                container
+                    .on('pointerdown touchstart', function (_e) {
+                        var e = _e.originalEvent.touches ? _e.originalEvent.touches[0] : _e.originalEvent;
+                        isDragging = true;
+                        startClientX = e.clientX;
+                        startTransform = transformAmount;
+                        // optional: cancel CSS transition so drag is 1:1
+                        scrollingText.css('transition', 'none');
+                        _e.preventDefault();
+                    })
+                    .on('pointermove touchmove', function (_e) {
+                        if (!isDragging) return;
+                        var e = _e.originalEvent.touches ? _e.originalEvent.touches[0] : _e.originalEvent;
+                        _e.preventDefault(); // prevent native scrolling
+
+                        // calculate new transformAmount from horizontal drag
+                        var dx = startClientX - e.clientX;
+                        transformAmount = startTransform + dx;
+
+                        // skew while dragging
+                        var skewDir = dx > 0 ? 10 : -10;
+                        container
+                            .find('.scrolling-text .scrolling-text-content')
+                            .css('transform', 'skewX(' + skewDir + 'deg)');
+
+                        // apply translate
+                        scrollingText.css(
+                            'transform',
+                            'translate3d(' + (-transformAmount) + 'px,0,0)'
+                        );
+
+                        // enforce your infinite‐loop bounds
+                        checkBounds();
+                    })
+                    .on('pointerup pointercancel touchend touchcancel', function (_e) {
+                        if (!isDragging) return;
+                        isDragging = false;
+                        // restore your smooth skew-reset
+                        container
+                            .find('.scrolling-text .scrolling-text-content')
+                            .css({
+                                transition: 'transform 0.5s cubic-bezier(0.23,0.36,0.28,0.83)',
+                                transform: 'skewX(0)'
+                            });
+                        // if you throttled scrollingText transition, restore it here
+                        scrollingText.css('transition', 'transform 0.5s cubic-bezier(0.23,0.36,0.28,0.5)');
+                    });
+            });
+        })
     }
 });
