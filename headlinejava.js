@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var containers = $('.container');
 
     if (containers.length) {
-        containers.each(function() {
+        containers.each(function () {
             var container = $(this);
 
             // Support small text - copy to fill screen width
@@ -33,59 +33,100 @@ $(document).ready(function() {
             if (container.attr('speed')) {
                 transformSpeed = container.attr('speed');
             }
-        
+
             // Make scrolling text copy for scrolling infinity
             container.append(scrollingText.clone().addClass('scrolling-text-copy'));
-            container.find('.scrolling-text').css({'position': 'absolute', 'left': 0});
+            container.find('.scrolling-text').css({ 'position': 'absolute', 'left': 0 });
             container.css('height', scrollingTextHeight);
-        
-            var getActiveScrollingText = function(direction) {
+
+            var getActiveScrollingText = function (direction) {
                 var firstScrollingText = container.find('.scrolling-text:nth-child(1)');
                 var secondScrollingText = container.find('.scrolling-text:nth-child(2)');
-        
+
                 var firstScrollingTextLeft = parseInt(container.find('.scrolling-text:nth-child(1)').css("left"), 10);
                 var secondScrollingTextLeft = parseInt(container.find('.scrolling-text:nth-child(2)').css("left"), 10);
-        
+
                 if (direction === 'left') {
                     return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
                 } else if (direction === 'right') {
                     return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
                 }
-            }
-        
-            $(window).on('wheel', function(e) {
-                var delta = e.originalEvent.deltaY;
-                
-                if (delta > 0) {
-                    // going down
-                    transformAmount += transformSpeed * transformDirection;
-                    container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(10deg)');
-                }
-                else {
-                    transformAmount -= transformSpeed * transformDirection;
-                    container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(-10deg)');
-                }
-                setTimeout(function(){
-                    container.find('.scrolling-text').css('transform', 'translate3d('+ transformAmount * -1 +'px, 0, 0)');
-                }, 10);
-                setTimeout(function() {
-                    container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(0)');
-                }, 500)
-        
-                // Boundaries
+            };
+
+            // Helper to enforce infinite-loop bounds
+            function checkBounds() {
                 if (transformAmount < leftBound) {
-                    var activeText = getActiveScrollingText('left');
-                    activeText.css({'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px'});
-                    leftBound = parseInt(activeText.css("left"), 10);
+                    var active = getActiveScrollingText('left');
+                    active.css({
+                        left: Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px'
+                    });
+                    leftBound = parseInt(active.css('left'), 10);
                     rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
-        
-                } else if (transformAmount > rightBound) {
-                    var activeText = getActiveScrollingText('right');
-                    activeText.css({'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px'});
+                }
+                else if (transformAmount > rightBound) {
+                    var active = getActiveScrollingText('right');
+                    active.css({
+                        left: Math.round(
+                            rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent
+                        ) + 'px'
+                    });
                     rightBound += scrollingTextWidth + startLetterIndent;
                     leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
                 }
+            }
+
+            // Helper to apply transform with skew effect
+            function applyTransform(delta) {
+                if (delta > 0) {
+                    transformAmount += transformSpeed * transformDirection;
+                    container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(10deg)');
+                } else {
+                    transformAmount -= transformSpeed * transformDirection;
+                    container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(-10deg)');
+                }
+                setTimeout(function () {
+                    container.find('.scrolling-text').css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');
+                }, 10);
+                setTimeout(function () {
+                    container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(0)');
+                }, 500);
+
+                checkBounds();
+            }
+
+            // 1) WHEEL SCROLL (desktop)
+            $(window).on('wheel', function (e) {
+                var delta = e.originalEvent.deltaY;
+                applyTransform(delta);
             });
-        })
+
+            // 2) TOUCH SCROLL (mobile) - vertical swipe triggers horizontal headline scroll
+            var touchStartY = 0,
+                lastTouchY = 0,
+                isTouching = false;
+
+            $(window).on('touchstart', function (e) {
+                touchStartY = e.originalEvent.touches[0].clientY;
+                lastTouchY = touchStartY;
+                isTouching = true;
+            });
+
+            $(window).on('touchmove', function (e) {
+                if (!isTouching) return;
+
+                var currentY = e.originalEvent.touches[0].clientY;
+                var deltaY = lastTouchY - currentY; // positive = scrolling down, negative = scrolling up
+
+                // Only trigger if there's meaningful movement
+                if (Math.abs(deltaY) > 5) {
+                    applyTransform(deltaY);
+                    lastTouchY = currentY;
+                }
+            });
+
+            $(window).on('touchend touchcancel', function () {
+                isTouching = false;
+            });
+        });
     }
 });

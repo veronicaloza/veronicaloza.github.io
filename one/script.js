@@ -1,11 +1,44 @@
-const container = document.querySelector('.horizontal-scroll-container');
-
-// Make mouse scroll down → horizontal slide
-container.addEventListener(
-    'wheel',
-    (e) => {
-        e.preventDefault(); // stop vertical page scroll
-        container.scrollLeft += e.deltaY; // apply the 'vertical' value horizontally
-    },
-    { passive: false }
+const container = document.querySelector(
+    '.horizontal-scroll-container'
 );
+const overlay = document.getElementById(
+    'scroll-arrow-overlay'
+);
+const AMOUNT = 600;
+
+// show/hide
+container.addEventListener('pointerenter', () => {
+    overlay.style.display = 'block';
+});
+container.addEventListener('pointerleave', () => {
+    overlay.style.display = 'none';
+});
+
+// move & flip icon
+container.addEventListener('pointermove', e => {
+    const rect = container.getBoundingClientRect();
+    const mid = rect.left + rect.width / 2;
+    overlay.style.left = `${e.clientX}px`;
+    overlay.style.top = `${e.clientY}px`;
+
+    if (e.clientX < mid) {
+        overlay.classList.add('dir-left');
+        overlay.dataset.dir = 'left';
+    } else {
+        overlay.classList.remove('dir-left');
+        overlay.dataset.dir = 'right';
+    }
+});
+
+// click → scroll
+container.addEventListener('click', () => {
+    const dir = overlay.dataset.dir;
+    const delta = dir === 'left' ? -AMOUNT : AMOUNT;
+    container.scrollBy({ left: delta, behavior: 'smooth' });
+});
+
+// your wheel → horiz
+container.addEventListener('wheel', e => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY * 1.5;
+}, { passive: false });

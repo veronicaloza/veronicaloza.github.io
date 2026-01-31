@@ -1,10 +1,44 @@
+@font-face {
+    font-family: 'Pelikan';
+    src: url('../font/ABCPelikan-Light-Trial.woff2') format('woff2'),
+        url('../font/ABCPelikan-Light-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body,
 html {
     overflow: auto;
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
-    background-color: whitesmoke;
+    background-color: #F9F9F9;
+}
+
+.options {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pelikan", sans-serif;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+.options:hover {
+    background-color: black;
+    color: white;
+}
+
+.options a:hover {
+    color: white;
 }
 
 .Mini-Titles {
@@ -13,22 +47,21 @@ html {
     top: 0px;
     justify-content: space-between;
     font-size: Medium;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     color: #333333;
     width: 100vw;
-    background-color: whitesmoke;
+    background-color: #F9F9F9;
     height: 40px;
     border-bottom: 0.5px solid #333333;
     z-index: 1;
 }
 
 .Mini-Titles :hover {
-    color: greenyellow
+    color: #d0e3ff
 }
 
 
 .mini-titles-container {
-    display: flex;
     color: #333333;
     position: fixed;
     right: 10px;
@@ -45,14 +78,20 @@ a {
     color: black;
 }
 
-.horizontal-scroll-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: inherit;
+.scroll-wrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
     width: 100vw;
     margin-top: 15rem;
+    overflow: hidden;
+}
+
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar {
@@ -61,6 +100,27 @@ a {
 
 .horizontal-scroll-container {
     scrollbar-width: none;
+}
+
+#scroll-arrow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+}
+
+#scroll-arrow-icon {
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.15s ease;
+    color: blue;
+}
+
+#scroll-arrow-overlay.dir-left #scroll-arrow-icon {
+    transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .item {
@@ -119,16 +179,14 @@ a {
 
 .description {
     display: flex;
-    flex-direction: row;
-    top: 6rem;
-    font-family: Arial, Helvetica, sans-serif;
+    top: 5rem;
+    font-family: "Pelikan";
     font-size: small;
     align-items: first baseline;
     width: 80%vw;
     justify-content: space-between;
     position: fixed;
     gap: 100px;
-    padding-left: 50px;
 }
 
 .options a {
@@ -141,8 +199,11 @@ a {
 
 #titles {
     color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     font-size: small;
+    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
     line-height: 2px;
 }
 
@@ -150,18 +211,94 @@ span {
     font-weight: bold;
 }
 
+#date {
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: small;
+}
+
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     font-weight: bold;
     font-size: medium;
     text-transform: uppercase;
 }
 
-
-#year {
-    width: 300px;
-}
-
 #artbio {
     width: 700px;
+}
+
+.footer {
+    color: black;
+    font-family: "Pelikan";
+    letter-spacing: -1px;
+    position: fixed;
+    left: 10px;
+}
+
+@media (max-width: 768px) {
+
+    body,
+    html {
+        overflow: auto;
+        max-width: 100%;
+        cursor: url(Images/fork.png), auto;
+        background-color: #F9F9F9;
+    }
+
+    .scroll-wrapper {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 20rem;
+        overflow: visible;
+    }
+
+    .horizontal-scroll-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: visible;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .item {
+        flex: 0 0 auto;
+        width: 90%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: none;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        top: 6rem;
+        font-family: "Pelikan";
+        font-size: small;
+        width: 90%;
+        position: relative;
+        gap: 20px;
+        padding: 0 5%;
+    }
+
+    #artbio {
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        left: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    #scroll-arrow-overlay {
+        display: none !important;
+    }
+
 }

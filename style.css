@@ -1,16 +1,25 @@
+@font-face {
+    font-family: 'Pelikan';
+    src: url('font/ABCPelikan-Light-Trial.woff2') format('woff2'),
+        url('font/ABCPelikan-Light-Trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body,
 html {
     overflow: auto;
     max-width: 100%;
     overflow-x: hidden;
     cursor: url(Images/fork.png), auto;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
 
 ::selection {
-    background-color: greenyellow;
+    background-color: blue;
     color: #333333;
 }
 
@@ -26,10 +35,10 @@ html {
     left: 0;
     justify-content: space-between;
     font-size: Medium;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     color: #333333;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     height: 40px;
     border-bottom: 0.5px solid #333333;
     z-index: 1;
@@ -47,7 +56,7 @@ html {
 
 .Mini-Titles a:hover {
     text-decoration: none;
-    color: greenyellow;
+    color: rgb(17, 0, 255);
 }
 
 #info {
@@ -57,8 +66,10 @@ html {
 
 #selected-works {
     color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pelikan";
     font-size: Medium;
+    letter-spacing: -1px;
+    transform: rotate(5deg);
 }
 
 .header {
@@ -78,7 +89,7 @@ img {
 }
 
 .boxcontainer {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .footer {
@@ -92,26 +103,12 @@ img {
 
 }
 
-.contact {
-    padding-top: 3rem;
-}
-
-.contact a {
-    color: #333333;
-    text-decoration: none;
-    font-size: medium;
-}
-
-.contact a:hover {
-    color: yellowgreen;
-}
-
 .archive {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 6rem;
-    padding: 0 2rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
     box-sizing: border-box;
 }
 
@@ -125,7 +122,6 @@ img {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
-        margin-top: 6rem;
         padding: 0 1rem;
         margin-left: auto;
         margin-right: auto;
@@ -139,6 +135,9 @@ img {
         width: 100%;
         height: auto;
     }
+
+
+
 }
 
 @media (min-width: 1024px) {
@@ -175,8 +174,13 @@ img {
 }
 
 #five {
-    background-image: url("thumbnails/highline.png");
+    background-image: url("thumbnails/bookgif.gif");
     background-size: cover;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #101010;
+
 }
 
 #six {
@@ -197,7 +201,7 @@ img {
     width: 100px;
     height: 30px;
     border-radius: 50px;
-    background-color: whitesmoke;
+    background-color: white;
     padding: 0px 7px 0px 7px;
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
@@ -209,7 +213,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -10px;
+    margin-top: 3rem;
+    padding: 0 20px;
 }
 
 
