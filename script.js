@@ -45,9 +45,22 @@ function filterEntries(selectedCategory) {
             item.style.display = 'none';
         }
     });
+    updateEntryLinks(selectedCategory);
+}
+
+function updateEntryLinks(filter) {
+    const param = filter && filter !== 'all' ? `?filter=${encodeURIComponent(filter)}` : '';
+    entries.forEach((entry) => {
+        const href = entry.getAttribute('href');
+        if (href && !href.startsWith('http')) {
+            const base = href.split('?')[0];
+            entry.setAttribute('href', base + param);
+        }
+    });
 }
 
 updateCounts();
+updateEntryLinks(select.value);
 
 filterButtons.forEach((button) => {
     button.addEventListener('click', () => {

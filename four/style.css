@@ -21,12 +21,15 @@ html {
     border-radius: 100px;
     border: 1px solid white;
     z-index: 2;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    mix-blend-mode: difference;
+    transition: background-color 0.2s ease, color 0.2s ease, mix-blend-mode 0.2s ease;
 }
 
 .nav-btn:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
+    border-color: black;
+    mix-blend-mode: normal;
 }
 
 .nav-prev {
@@ -174,7 +177,7 @@ h1 {
 .scroll-top-btn {
     padding: 8px 16px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-size: small;
     background-color: transparent;
     border: 1px solid white;
     color: white;

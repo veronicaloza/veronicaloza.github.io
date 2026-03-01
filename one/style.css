@@ -4,6 +4,8 @@ html {
     max-width: 100%;
     cursor: url(../Images/fork.png), auto;
     background-color: #DFE6F0;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-btn {
@@ -16,17 +18,20 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     text-decoration: none;
-    color: black;
+    color: white;
     background-color: transparent;
     border-radius: 100px;
-    border: 1px solid black;
+    border: 1px solid white;
     z-index: 2;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    mix-blend-mode: difference;
+    transition: background-color 0.2s ease, color 0.2s ease, mix-blend-mode 0.2s ease;
 }
 
 .nav-btn:hover {
     background-color: black;
     color: white;
+    border-color: black;
+    mix-blend-mode: normal;
 }
 
 .nav-next {
@@ -73,18 +78,20 @@ a {
 .description {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: medium;
     align-items: first baseline;
     width: 80%;
     max-width: 1200px;
     justify-content: space-between;
     gap: 100px;
-    margin: 5rem auto 3rem;
-    padding: 0 1rem;
+    position: relative;
+    padding-top: 3rem;
+    left: 10%;
 }
 
 #titles {
-    color: #333333;
+    color: black;
+    ;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     font-weight: bold;
@@ -98,9 +105,10 @@ span {
 }
 
 #date {
-    text-transform: lowercase;
+    text-transform: initial;
     font-style: italic;
-    font-size: small;
+    font-size: medium;
+    font-weight: lighter;
 }
 
 h1 {
@@ -118,7 +126,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    gap: 1rem;
+    ;
     width: 100%;
     padding: 0;
 }
@@ -134,6 +143,7 @@ h1 {
 
 #one {
     background-image: url(images/one.jpg);
+    background-size: cover;
 }
 
 #two {
@@ -142,14 +152,17 @@ h1 {
 
 #three {
     background-image: url(images/two.jpg);
+    background-size: cover;
 }
 
 #four {
     background-image: url(images/three.png);
+
 }
 
 #five {
     background-image: url(images/4.png);
+    gap: -1rem;
 }
 
 #six {
@@ -170,6 +183,7 @@ h1 {
 .scroll-top-btn {
     padding: 8px 16px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
     background-color: transparent;
     border: 1px solid black;
     border-radius: 100px;
