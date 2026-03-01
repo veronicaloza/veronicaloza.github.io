@@ -16,17 +16,17 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     text-decoration: none;
-    color: black;
+    color: white;
     background-color: transparent;
     border-radius: 100px;
-    border: 1px solid black;
+    border: 1px solid white;
     z-index: 2;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .nav-prev {
@@ -45,7 +45,6 @@ html {
     justify-content: space-between;
     font-size: Medium;
     font-family: Arial, Helvetica, sans-serif;
-    color: #333333;
     width: 100vw;
     background-color: #F9F9F9;
     height: 40px;
@@ -59,7 +58,6 @@ html {
 }
 
 .mini-titles-container {
-    color: #333333;
     position: fixed;
     right: 10px;
 }
@@ -136,7 +134,9 @@ h1 {
 }
 
 #one {
-    background-image: url(images/1.png);
+    background-image: url(images/GG_Bags_Thumbnail.png);
+    background-size: cover;
+    width: 100vw;
 }
 
 #two {
@@ -144,7 +144,9 @@ h1 {
 }
 
 #three {
-    background-image: url(images/3.png);
+    background-image: url(images/instagram.png);
+    background-size: cover;
+    width: 100vw;
 }
 
 #four {

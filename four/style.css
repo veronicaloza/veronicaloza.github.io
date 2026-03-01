@@ -3,7 +3,7 @@ html {
     overflow-x: hidden;
     max-width: 100%;
     cursor: url(../Images/fork.png), auto;
-    background-color: #F9F9F9;
+    background-color: black;
 }
 
 .nav-btn {
@@ -16,17 +16,17 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     text-decoration: none;
-    color: black;
+    color: white;
     background-color: transparent;
     border-radius: 100px;
-    border: 1px solid black;
+    border: 1px solid white;
     z-index: 2;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .nav-prev {
@@ -84,10 +84,11 @@ a {
     gap: 100px;
     margin: 5rem auto 3rem;
     padding: 0 1rem;
+    color: white;
 }
 
 #titles {
-    color: #333333;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     font-weight: bold;
@@ -165,7 +166,7 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     padding: 2rem 1rem;
 }
@@ -175,15 +176,16 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white;
     border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .scroll-top-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 @media (max-width: 768px) {
