@@ -56,12 +56,10 @@ html {
 
 .Mini-Titles a:hover {
     text-decoration: none;
-    color: rgb(17, 0, 255);
-}
-
-#info {
+    color: black;
     font-style: italic;
 }
+
 
 
 #selected-works {

@@ -5,10 +5,8 @@
     left: 0;
     justify-content: space-between;
     font-size: Medium;
-    font-family: "Pelikan";
-    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    background-color: whitesmoke;
     height: 40px;
     border-bottom: 0.5px solid #333333;
     z-index: 1;
@@ -17,8 +15,23 @@
     box-sizing: border-box;
 }
 
+.Mini-Titles a {
+    text-decoration: none;
+    color: black;
+}
+
+.Mini-Titles a:hover {
+    font-style: italic;
+}
+
 .contact {
     padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    padding-left: 1rem;
 }
 
 .contact a {
@@ -28,5 +41,29 @@
 }
 
 .contact a:hover {
-    color: yellowgreen;
+    color: blue;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+}
+
+.body-container {
+    padding: 4rem 1rem;
+}
+
+img {
+    position: fixed;
+    width: 600px;
+    top: 150px;
+    right: 150px;
+}
+
+span {
+    font-family: "erotica-big", sans-serif;
 }
