@@ -35,7 +35,7 @@ html {
     left: 0;
     justify-content: space-between;
     font-size: Medium;
-    font-family: "Pelikan";
+    font-family: Arial, Helvetica, sans-serif;
     color: #333333;
     width: 100%;
     background-color: white;
@@ -65,11 +65,15 @@ html {
 
 
 #selected-works {
-    color: #333333;
-    font-family: "Pelikan";
+    font-family: Arial, Helvetica, sans-serif;
     font-size: Medium;
-    letter-spacing: -1px;
-    transform: rotate(5deg);
+}
+
+.count {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    transform: translate(5px, -6px);
 }
 
 .header {
@@ -112,9 +116,27 @@ img {
     box-sizing: border-box;
 }
 
+.entry-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+}
+
 .entry {
+    display: block;
     width: 100%;
     aspect-ratio: 3 / 2;
+}
+
+.entry-caption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.year-caption {
+    font-style: italic;
+    font-weight: 100;
 }
 
 @media (min-width: 768px) {
@@ -135,8 +157,6 @@ img {
         width: 100%;
         height: auto;
     }
-
-
 
 }
 
@@ -162,7 +182,7 @@ img {
 }
 
 #three {
-    background-image: url("thumbnails/glowgirl.png");
+    background-image: url("thumbnails/GG_Bags_Thumbnail.png");
     background-size: cover;
     background-position: center center;
 }
@@ -189,23 +209,82 @@ img {
 }
 
 #seven {
-    background-image: url("thumbnails/1st.gif");
+    position: relative;
     background-color: #333333;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    overflow: hidden;
+}
+
+#seven video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: none;
 }
 
 
-#categorySelect {
+.mobile-filter {
+    display: block;
     width: 100px;
     height: 30px;
     border-radius: 50px;
     background-color: white;
-    padding: 0px 7px 0px 7px;
-    color: #333333;
+    padding: 0px 7px;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: Medium;
+    font-size: medium;
+    border: 1px solid black;
+}
+
+.desktop-filter {
+    display: none;
+}
+
+.filter-buttons {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    position: relative;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn .count {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    transform: none;
+}
+
+.filter-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: black;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .mobile-filter {
+        display: none;
+    }
+
+    .desktop-filter {
+        display: flex;
+    }
 }
 
 

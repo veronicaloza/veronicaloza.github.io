@@ -75,25 +75,58 @@
 
 
     <div class="subtitles">
-      <p id="selected-works">Selected works:)</p>
+      <p id="selected-works">Selected works:)<span class="count">5</span></p>
 
-      <select id="categorySelect">
+      <select id="categorySelect" class="mobile-filter">
         <option value="all">All</option>
-        <option value="Editorial">Editorial</option>
         <option value="Branding">Branding</option>
         <option value="Website">Website</option>
-        <option value="Campaign">Campaign</option>
+        <option value="Editorial">Editorial</option>
+        <option value="Motion">Motion</option>
       </select>
+
+      <div class="filter-buttons desktop-filter">
+        <button class="filter-btn active" data-category="all">All<span class="count" data-count="all">5</span></button>
+        <button class="filter-btn" data-category="Branding">Branding<span class="count"
+            data-count="Branding">1</span></button>
+        <button class="filter-btn" data-category="Website">Website<span class="count"
+            data-count="Website">1</span></button>
+        <button class="filter-btn" data-category="Editorial">Editorial<span class="count"
+            data-count="Editorial">3</span></button>
+        <button class="filter-btn" data-category="Motion">Motion<span class="count"
+            data-count="Motion">0</span></button>
+      </div>
     </div>
 
 
     <div class="archive">
-      <a class="entry Editorial" id="one" href="one/index.html"></a>
-      <a class="entry Branding" id="three" href="three/index.html"></a>
-      <a class="entry Editorial" id="four" href="four/index.html"></a>
-      <!-- <!-- <a class="entry Editorial Campaign" id="five" href="five/index.html"></a> -->
-      <a class="entry Website Editorial" id="five" href="five/index.html"></a>
-      <a class="entry " id="seven" href="seven/index.html"></a>
+      <div class="entry-item">
+        <a class="entry Editorial" id="one" href="one/index.html"></a>
+        <span class="entry-caption">Home Publication: A manual on tea-making <br><span class="year-caption">Spring
+            2025</span></span>
+      </div>
+      <div class="entry-item">
+        <a class="entry Branding" id="three" href="three/index.html"></a>
+        <span class="entry-caption">Glow Girl Boutique Brand Identity<br><span class="year-caption">Spring
+            2025</span></span>
+      </div>
+      <div class="entry-item">
+        <a class="entry Motion" id="seven" href="seven/index.html">
+          <video src="thumbnails/Printed_Matter_Identity.mp4" muted autoplay loop playsinline></video>
+        </a>
+        <span class="entry-caption">Printed Matter Identity<br><span class="year-caption">Fall 2025</span></span>
+      </div>
+      <div class="entry-item">
+        <a class="entry Website Editorial" id="five" href="five/index.html"></a>
+        <span class="entry-caption">The Invisible Dance with the Seashells<br><span class="year-caption">Fall
+            2025</span></span>
+      </div>
+      <div class="entry-item">
+        <a class="entry Editorial" id="four" href="four/index.html"></a>
+        <span class="entry-caption">Wikibook: The World of QR Codes<br><span class="year-caption">Winter
+            2024</span></span>
+      </div>
+
     </div>
 
 
