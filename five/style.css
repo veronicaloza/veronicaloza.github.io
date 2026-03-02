@@ -3,7 +3,7 @@ html {
     overflow-x: hidden;
     max-width: 100%;
     cursor: url(../Images/fork.png), auto;
-    background-color: #F9F9F9;
+    background-color: black;
 }
 
 .nav-btn {
@@ -87,10 +87,11 @@ a {
     gap: 100px;
     margin: 5rem auto 3rem;
     padding: 0 1rem;
+    color: white;
 }
 
 #titles {
-    color: #333333;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     font-weight: bold;
@@ -139,7 +140,10 @@ h1 {
 }
 
 #one {
+    padding-top: 3rem;
     background-image: url(images/overview.png);
+    background-size: fit;
+    background-position: center center;
 }
 
 #two {
@@ -151,11 +155,106 @@ h1 {
 }
 
 #four {
-    background-image: url(images/three.png);
+    background-image: url(images/Final_Envelope.gif);
+    background-size: fit;
+    background-position: center center;
+
 }
 
 #five {
-    background-image: url(images/4.png);
+    position: relative;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+#five video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.video-controls-bar {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+}
+
+.play-pause-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.play-pause-btn .icon-play {
+    display: none;
+}
+
+.play-pause-btn .icon-pause {
+    display: block;
+}
+
+.play-pause-btn.paused .icon-play {
+    display: block;
+}
+
+.play-pause-btn.paused .icon-pause {
+    display: none;
+}
+
+.video-seek-bar {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.video-seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.video-seek-bar::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 #six {
@@ -217,6 +316,17 @@ h1 {
 
     .item {
         min-height: 50vh;
+    }
+
+    .video-controls-bar {
+        left: 12px;
+        right: 12px;
+        bottom: 16px;
+    }
+
+    .play-pause-btn {
+        width: 36px;
+        height: 36px;
     }
 
 }
