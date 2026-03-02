@@ -8,6 +8,11 @@ html {
     padding: 0;
 }
 
+.container {
+    margin: 0;
+    padding: 0;
+}
+
 .nav-btn {
     position: fixed;
     top: 60px;
@@ -40,6 +45,29 @@ html {
 
 .nav-next {
     right: 20px;
+}
+
+.case-study-btn {
+    display: inline-flex;
+    position: relative;
+    top: 25px;
+    right: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-decoration: none;
+    color: #48000A;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #48000A;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.case-study-btn:hover {
+    background-color: #48000A;
+    color: white;
 }
 
 .Mini-Titles {
@@ -85,7 +113,7 @@ a {
     max-width: 1200px;
     justify-content: space-between;
     gap: 100px;
-    margin: 5rem auto 3rem;
+    margin: 5rem auto 0;
     padding: 0 1rem;
 }
 
@@ -117,25 +145,48 @@ h1 {
     text-transform: uppercase;
 }
 
+h1 a {
+    text-decoration: underline;
+}
+
+h1 a:hover {
+    font-style: italic;
+}
+
+#case-study a {
+
+    font-size: medium;
+    width: 00px;
+    height: 20px;
+    background-color: #48000A;
+    color: white;
+    text-transform: initial;
+}
+
+#case-study a:hover {
+    font-style: italic;
+}
+
 #artbio {
     width: 700px;
 }
 
 .image-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+    display: block;
     width: 100%;
+    margin: 0;
+    padding: 0;
     line-height: 0;
 }
 
 .item {
     width: 100%;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     display: block;
+    border: none;
+    box-sizing: border-box;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -156,20 +207,26 @@ h1 {
 
 #three {
     background-image: url(images/instagram_design.png);
-    background-size: contain;
+    background-size: cover;
     width: 100vw;
 }
 
 #four {
-    background-image: url(images/4.png);
+    background-image: url(images/44.png);
+    background-size: cover;
+    width: 100vw;
 }
 
 #five {
-    background-image: url(images/29.png);
+    background-image: url(images/45.png);
+    background-size: cover;
+    width: 100vw;
 }
 
 #six {
-    background-image: url(images/31.png);
+    background-image: url(images/49.png);
+    background-size: contain;
+    width: 100vw;
 }
 
 #seven {
