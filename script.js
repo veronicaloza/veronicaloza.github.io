@@ -1,3 +1,15 @@
+const scrollProgressFill = document.querySelector('.scroll-progress-fill');
+if (scrollProgressFill) {
+    function updateScrollProgress() {
+        const scrollTop = window.scrollY;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? Math.min((scrollTop / scrollHeight) * 100, 100) : 0;
+        scrollProgressFill.style.width = `${progress}%`;
+    }
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    updateScrollProgress();
+}
+
 const filterButtons = document.querySelectorAll('.filter-btn');
 const select = document.getElementById('categorySelect');
 const entries = document.querySelectorAll('.entry');

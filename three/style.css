@@ -90,6 +90,23 @@ html {
     font-style: italic;
 }
 
+.scroll-progress-bar {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: transparent;
+    z-index: 1;
+}
+
+.scroll-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #FF62FF;
+    transition: width 0.05s ease-out;
+}
+
 .mini-titles-container {
     position: fixed;
     right: 10px;

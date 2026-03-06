@@ -38,8 +38,9 @@ function initProjectNav() {
     if (prevBtn) {
         if (currentIndex > 0) {
             prevBtn.href = '../' + filteredPaths[currentIndex - 1] + filterParam;
+            prevBtn.style.display = '';
         } else {
-            prevBtn.href = '../index.html';
+            prevBtn.style.display = 'none';
         }
     }
 
