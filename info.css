@@ -24,6 +24,12 @@
     font-style: italic;
 }
 
+.mini-titles-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
 .contact {
     display: flex;
     flex-direction: column;

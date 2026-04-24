@@ -74,11 +74,13 @@ function updateCounts() {
     });
 
     // Update select options with counts
-    const options = select.querySelectorAll('option');
-    options.forEach(opt => {
-        const label = opt.value === 'all' ? 'All' : opt.value;
-        opt.textContent = `${label} (${counts[opt.value] ?? 0})`;
-    });
+    if (select) {
+        const options = select.querySelectorAll('option');
+        options.forEach(opt => {
+            const label = opt.value === 'all' ? 'All' : opt.value;
+            opt.textContent = `${label} (${counts[opt.value] ?? 0})`;
+        });
+    }
 }
 
 function filterEntries(selectedCategory) {
@@ -105,22 +107,26 @@ function updateEntryLinks(filter) {
     });
 }
 
-updateCounts();
-updateEntryLinks(select.value);
+if (select && filterButtons.length) {
+    updateCounts();
+    updateEntryLinks(select.value);
 
-filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        filterButtons.forEach((btn) => btn.classList.remove('active'));
-        button.classList.add('active');
-        select.value = button.dataset.category;
-        filterEntries(button.dataset.category);
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach((btn) => btn.classList.remove('active'));
+            button.classList.add('active');
+            select.value = button.dataset.category;
+            filterEntries(button.dataset.category);
+        });
     });
-});
 
-select.addEventListener('change', (e) => {
-    const selectedCategory = e.target.value;
-    filterButtons.forEach((btn) => {
-        btn.classList.toggle('active', btn.dataset.category === selectedCategory);
+    select.addEventListener('change', (e) => {
+        const selectedCategory = e.target.value;
+        filterButtons.forEach((btn) => {
+            btn.classList.toggle('active', btn.dataset.category === selectedCategory);
+        });
+        filterEntries(selectedCategory);
     });
-    filterEntries(selectedCategory);
-});
+} else if (select && entries.length) {
+    updateEntryLinks(select.value);
+}

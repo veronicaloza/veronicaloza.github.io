@@ -150,37 +150,27 @@ h1 {
 
 .item {
     width: 100%;
-    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
     display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    border: none;
+    box-sizing: border-box;
 }
 
 #one {
     padding-top: 3rem;
-    background-image: url(images/overview.png);
-    background-size: fit;
-    background-position: center center;
+    box-sizing: border-box;
 }
 
-#two {
-    background-image: url(images/bookgif.gif);
-}
-
-#three {
-    background-image: url(images/spreads.png);
-}
-
-#four {
-    background-image: url(images/Final_Envelope.gif);
-    background-size: fit;
-    background-position: center center;
-
+.item > img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #five {
     position: relative;
+    min-height: 100vh;
     background-color: #1a1a1a;
     overflow: hidden;
 }
@@ -275,10 +265,6 @@ h1 {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-#six {
-    background-image: url(images/5.png);
-}
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -344,10 +330,6 @@ h1 {
 
     #artbio {
         width: 100%;
-    }
-
-    .item {
-        min-height: 50vh;
     }
 
     .video-controls-bar {

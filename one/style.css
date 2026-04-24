@@ -151,39 +151,17 @@ h1 {
 
 .item {
     width: 100%;
-    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
     display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    border: none;
+    box-sizing: border-box;
 }
 
-#one {
-    background-image: url(images/one.jpg);
-    background-size: cover;
-}
-
-#two {
-    background-image: url(images/animation.gif);
-}
-
-#three {
-    background-image: url(images/two.jpg);
-    background-size: cover;
-}
-
-#four {
-    background-image: url(images/three.png);
-
-}
-
-#five {
-    background-image: url(images/4.png);
-    gap: -1rem;
-}
-
-#six {
-    background-image: url(images/5.png);
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .footer {
@@ -251,10 +229,6 @@ h1 {
 
     #artbio {
         width: 100%;
-    }
-
-    .item {
-        min-height: 50vh;
     }
 
 }

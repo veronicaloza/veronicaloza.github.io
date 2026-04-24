@@ -148,18 +148,22 @@ h1 {
 
 .item {
     width: 100%;
-    min-height: 100vh;
     display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    box-sizing: border-box;
 }
 
 #one {
     position: relative;
     margin-top: 2rem;
+    min-height: 100vh;
     background-color: #EDEDED;
     overflow: hidden;
+}
+
+.item > img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #one video {
@@ -293,18 +297,6 @@ h1 {
     display: none;
 }
 
-#three {
-    background-image: url(Images/tickets.png);
-    background-size: cover;
-    background-position: center center;
-}
-
-#four {
-    background-image: url(Images/mockup.png);
-    background-size: cover;
-    background-position: center center;
-}
-
 #five {
     position: relative;
     background-color: #EDEDED;
@@ -362,10 +354,6 @@ h1 {
     display: block;
 }
 
-#six {
-    background-image: url(images/5.png);
-}
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -417,10 +405,6 @@ h1 {
 
     #artbio {
         width: 100%;
-    }
-
-    .item {
-        min-height: 50vh;
     }
 
     .five-side-videos {
