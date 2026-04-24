@@ -1,8 +1,8 @@
 // Project order matches index.html display order. Categories must match entry class names.
 const PROJECT_NAV = [
+    { id: 'printed_matter', path: 'printed_matter/index.html', categories: ['Motion', 'Branding'] },
     { id: 'one', path: 'one/index.html', categories: ['Editorial'] },
     { id: 'three', path: 'three/index.html', categories: ['Branding'] },
-    { id: 'printed_matter', path: 'printed_matter/index.html', categories: ['Motion', 'Branding'] },
     { id: 'five', path: 'five/index.html', categories: ['Website', 'Editorial'] },
     { id: 'four', path: 'four/index.html', categories: ['Editorial'] },
 ];
