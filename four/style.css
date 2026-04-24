@@ -103,7 +103,8 @@ a {
     justify-content: space-between;
     gap: 100px;
     margin: 5rem auto 3rem;
-    padding: 0 1rem;
+    padding: 3rem;
+    background-color: yellow;
     color: white;
 }
 
@@ -208,6 +209,19 @@ h1 {
     color: black;
 }
 
+.block-2up img {
+    display: block;
+    width: 100%;
+    border: 1px solid red;
+}
+
+@media (min-width: 800px) {
+    .block-2up {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
 
     body,
@@ -225,7 +239,8 @@ h1 {
         font-size: small;
         width: 90%;
         gap: 20px;
-        padding: 0 5%;
+        padding: 3rem;
+        background-color: yellow;
         margin-top: 5rem;
         margin-bottom: 2rem;
     }
