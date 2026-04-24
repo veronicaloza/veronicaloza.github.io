@@ -1,3 +1,15 @@
+html {
+    scroll-behavior: smooth;
+    /* fixed Mini-Titles (40px) + progress bar (6px) */
+    scroll-padding-top: 46px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body,
 html {
     overflow: auto;
@@ -77,7 +89,7 @@ html {
     height: 100%;
     width: 0%;
     background: #FF62FF;
-    transition: width 0.05s ease-out;
+    /* Width is driven from JS; avoid transition so the bar tracks scroll in sync. */
 }
 
 #selected-works {
@@ -191,11 +203,6 @@ img {
     transition-delay: calc(var(--w) * 55ms);
 }
 
-.year-caption {
-    font-style: italic;
-    font-weight: 100;
-    margin-top: 0.35rem;
-}
 
 @media (min-width: 768px) {
     .archive {

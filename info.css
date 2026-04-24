@@ -1,3 +1,14 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 .Mini-Titles {
     display: flex;
     position: fixed;

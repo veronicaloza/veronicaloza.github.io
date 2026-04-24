@@ -34,14 +34,25 @@ initCaptionWordAnimation();
 
 const scrollProgressFill = document.querySelector('.scroll-progress-fill');
 if (scrollProgressFill) {
-    function updateScrollProgress() {
-        const scrollTop = window.scrollY;
+    let progressRaf = 0;
+    function readScrollProgress() {
+        const lenis = window.lenis;
+        const scrollTop = lenis ? lenis.scroll : window.scrollY;
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = scrollHeight > 0 ? Math.min((scrollTop / scrollHeight) * 100, 100) : 0;
         scrollProgressFill.style.width = `${progress}%`;
+        progressRaf = 0;
     }
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-    updateScrollProgress();
+    function updateScrollProgress() {
+        if (progressRaf) return;
+        progressRaf = requestAnimationFrame(readScrollProgress);
+    }
+    if (window.lenis) {
+        window.lenis.on('scroll', readScrollProgress);
+    } else {
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    }
+    readScrollProgress();
 }
 
 const filterButtons = document.querySelectorAll('.filter-btn');

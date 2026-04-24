@@ -1,5 +1,9 @@
 document.querySelector('.scroll-top-btn')?.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.lenis) {
+        window.lenis.scrollTo(0, { lerp: 0.12 });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 });
 
 const audioBtn = document.querySelector('.audio-toggle-btn');
