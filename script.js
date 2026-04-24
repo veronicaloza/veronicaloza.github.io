@@ -1,3 +1,37 @@
+function escapeHtml(text) {
+    const el = document.createElement('div');
+    el.textContent = text;
+    return el.innerHTML;
+}
+
+function initCaptionWordAnimation() {
+    document.querySelectorAll('.entry-caption').forEach((caption) => {
+        let wordIndex = 0;
+        const lines = caption.innerHTML.split(/<br\s*\/?>/i);
+        const built = lines
+            .map((line) => {
+                const textOnly = line.replace(/<[^>]*>/g, '').trim();
+                if (!textOnly) return '';
+                return textOnly
+                    .split(/\s+/)
+                    .filter(Boolean)
+                    .map((word) => {
+                        const i = wordIndex;
+                        wordIndex += 1;
+                        return `<span class="caption-word" style="--w:${i}">${escapeHtml(word)}</span>`;
+                    })
+                    .join(' ');
+            })
+            .filter((s) => s !== '');
+        caption.innerHTML = built
+            .map((line) => (line ? `<span class="caption-line">${line}</span>` : ''))
+            .filter(Boolean)
+            .join('');
+    });
+}
+
+initCaptionWordAnimation();
+
 const scrollProgressFill = document.querySelector('.scroll-progress-fill');
 if (scrollProgressFill) {
     function updateScrollProgress() {
