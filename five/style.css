@@ -113,8 +113,7 @@ a {
     justify-content: space-between;
     gap: 100px;
     margin: 5rem auto 3rem;
-    padding: 3rem;
-    background-color: yellow;
+    padding: 0 1rem;
     color: white;
 }
 
@@ -125,7 +124,6 @@ a {
     font-weight: bold;
     font-size: medium;
     text-transform: uppercase;
-    line-height: 2px;
 }
 
 span {
@@ -133,7 +131,7 @@ span {
 }
 
 #date {
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-style: italic;
     font-size: small;
 }
@@ -172,7 +170,7 @@ h1 {
     box-sizing: border-box;
 }
 
-.item > img {
+.item>img {
     display: block;
     width: 100%;
     height: auto;
@@ -327,15 +325,16 @@ h1 {
 
     .description {
         display: flex;
-        flex-direction: column;
         font-family: Arial, Helvetica, sans-serif;
         font-size: small;
-        width: 90%;
-        gap: 20px;
-        padding: 3rem;
-        background-color: yellow;
-        margin-top: 5rem;
-        margin-bottom: 2rem;
+        align-items: first baseline;
+        width: 80%;
+        max-width: 1200px;
+        justify-content: space-between;
+        gap: 100px;
+        margin: 5rem auto 3rem;
+        padding: 0 1rem;
+        color: white;
     }
 
     #artbio {
