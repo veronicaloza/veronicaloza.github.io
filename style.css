@@ -170,6 +170,17 @@ img {
     color: #333333;
 }
 
+.entry-subtitle-title,
+.entry-subtitle-line {
+    display: block;
+}
+
+.entry-subtitle-line {
+    margin-top: 0.1rem;
+    font-size: small;
+    font-style: italic;
+}
+
 
 @media (min-width: 768px) {
     .archive {
