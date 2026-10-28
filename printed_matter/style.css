@@ -170,7 +170,7 @@ h1 {
     overflow: hidden;
 }
 
-.item > img {
+.item>img {
     display: block;
     width: 100%;
     height: auto;

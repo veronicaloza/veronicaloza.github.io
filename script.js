@@ -1,3 +1,28 @@
+function scrollToBiography() {
+    const target = document.getElementById('intro');
+    if (!target) return;
+    const current = window.lenis ? window.lenis.scroll : window.scrollY;
+    const top = current + target.getBoundingClientRect().top - 56;
+    if (window.lenis) {
+        window.lenis.scrollTo(top, { force: true });
+    } else {
+        window.scrollTo(0, top);
+    }
+}
+
+document.querySelectorAll('a[href="#intro"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        scrollToBiography();
+        history.pushState(null, '', '#intro');
+    });
+});
+
+if (window.location.hash === '#intro') {
+    scrollToBiography();
+    window.addEventListener('load', scrollToBiography);
+}
+
 const scrollProgressFill = document.querySelector('.scroll-progress-fill');
 if (scrollProgressFill) {
     let progressRaf = 0;

@@ -4,11 +4,10 @@
 
     window.lenis = new Lenis({
         autoRaf: true,
-        lerp: 0.075,
+        lerp: 0.55,
         smoothWheel: true,
         syncTouch: true,
-        touchMultiplier: 0.88,
-        wheelMultiplier: 0.9,
-        anchors: true,
+        touchMultiplier: 1,
+        wheelMultiplier: 1,
     });
 })();
