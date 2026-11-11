@@ -52,18 +52,20 @@ html {
 .Mini-Titles {
     display: flex;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
+    right: 0;
     justify-content: space-between;
-    font-size: Medium;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
-    width: 100vw;
+    width: auto;
+    box-sizing: border-box;
     background-color: #F9F9F9;
     height: 40px;
     padding: 0 1rem;
     border-bottom: 0.5px solid #000000;
-    z-index: 1;
+    z-index: 200;
 }
 
 .Mini-Titles :hover {
