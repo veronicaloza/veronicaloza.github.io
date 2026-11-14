@@ -91,6 +91,25 @@ html {
     margin-right: 0.4rem;
 }
 
+.nav-globe {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+    z-index: 202;
+    cursor: pointer;
+}
+
+.nav-globe canvas {
+    display: block;
+    width: 32px !important;
+    height: 32px !important;
+    cursor: pointer;
+    pointer-events: none;
+}
+
 .contact a:hover {
     color: blue;
 }
@@ -223,21 +242,75 @@ p a {
     position: fixed;
     top: 3rem;
     left: 1rem;
-    width: min(256px, 32vw);
+    width: min(520px, 48vw);
     margin: 0;
     z-index: 1;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
-.about-portrait img {
+#about-globe canvas {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 4;
     height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: center bottom;
+    cursor: grab;
+}
+
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.photo-viewer[hidden] {
+    display: none;
+}
+
+.photo-viewer-image {
+    max-width: calc(100vw - 8rem);
+    max-height: calc(100vh - 4rem);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.photo-viewer button {
+    position: absolute;
+    border: 0;
+    background: transparent;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.photo-viewer-prev,
+.photo-viewer-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.photo-viewer-prev {
+    left: 1rem;
+}
+
+.photo-viewer-next {
+    right: 1rem;
+}
+
+.photo-viewer-close {
+    top: 1rem;
+    right: 1rem;
+    font-size: 28px;
+}
+
+.photo-viewer button:hover {
+    font-style: italic;
 }
 
 @media (max-width: 800px) {
@@ -282,7 +355,8 @@ p a {
         margin: 0 0 1.5rem;
     }
 
-    .about-portrait img {
+    .about-portrait img,
+    #about-globe canvas {
         width: min(360px, 100%);
     }
 }

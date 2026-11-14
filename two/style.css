@@ -132,6 +132,25 @@ html {
     margin-right: 0.4rem;
 }
 
+.nav-globe {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+    z-index: 202;
+    cursor: pointer;
+}
+
+.nav-globe canvas {
+    display: block;
+    width: 32px !important;
+    height: 32px !important;
+    cursor: pointer;
+    pointer-events: none;
+}
+
 .header {
     margin-top: 3rem;
 }
