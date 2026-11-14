@@ -415,16 +415,19 @@ img {
     box-sizing: border-box;
 }
 
-/* Archive: two-up image / video grid */
+.block-2up {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.block-2up > div {
+    grid-column: span 2;
+}
+
 .block-2up img,
 .block-2up video {
     display: block;
-    width: 50%;
-}
-
-@media (min-width: 800px) {
-    .block-2up {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+    width: 100%;
+    height: auto;
 }
