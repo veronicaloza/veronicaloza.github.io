@@ -58,19 +58,30 @@ html {
     left: 0;
     right: 0;
     justify-content: space-between;
+    align-items: center;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
     width: auto;
     box-sizing: border-box;
-    background-color: #F9F9F9;
+    background-color: white;
     height: 40px;
     padding: 0 1rem;
-    border-bottom: 0.5px solid #000000;
+    border-bottom: 0.5px solid #333333;
     z-index: 200;
 }
 
-.Mini-Titles :hover {
+.Mini-Titles p,
+.Mini-Titles a {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.Mini-Titles a:hover {
+    color: black;
     font-style: italic;
 }
 
@@ -90,10 +101,35 @@ html {
     background: #FF62FF;
 }
 
-.mini-titles-container {
-    color: #333333;
+.mini-titles-nav {
     position: fixed;
-    right: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    z-index: 201;
+    pointer-events: none;
+    transform: none;
+}
+
+.mini-titles-nav a,
+.nav-comma {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    vertical-align: baseline;
+    pointer-events: auto;
+}
+
+.nav-comma {
+    color: #333333;
+    margin-right: 0.4rem;
 }
 
 .header {

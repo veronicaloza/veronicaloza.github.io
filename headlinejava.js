@@ -26,7 +26,6 @@ $(document).ready(function () {
                 transformAmount = 0,
                 leftBound = 0,
                 rightBound = scrollAmountBoundary,
-                transformDirection = container.hasClass('left-to-right') ? -1 : 1,
                 transformSpeed = 200;
 
             // Read transform speed
@@ -78,102 +77,39 @@ $(document).ready(function () {
             var scrollingEls = container.find('.scrolling-text');
             var scrollingContent = container.find('.scrolling-text .scrolling-text-content');
 
-            // Batched: one translate per frame, fewer style writes while trackpads send many wheel events
-            function applyTransform(delta, n) {
-                n = Math.max(1, n | 0);
-                if (delta > 0) {
-                    transformAmount += transformSpeed * transformDirection * n;
-                    scrollingContent.css('transform', 'skewX(10deg)');
-                } else {
-                    transformAmount -= transformSpeed * transformDirection * n;
-                    scrollingContent.css('transform', 'skewX(-10deg)');
-                }
-                requestAnimationFrame(function () {
-                    scrollingEls.css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');
-                });
-                window.setTimeout(function () {
-                    scrollingContent.css('transform', 'skewX(0)');
-                }, 500);
+            // Move the headline with the page, including when the pointer is over the works.
+            var lastScrollY = 0;
+            var skewTimer = null;
+            var scrollFactor = (parseFloat(transformSpeed) || 70) / 45;
 
+            function readScrollY() {
+                if (window.lenis && typeof window.lenis.scroll === 'number') {
+                    return window.lenis.scroll;
+                }
+                return window.scrollY || document.documentElement.scrollTop || 0;
+            }
+
+            function syncHeadlineToPageScroll() {
+                var y = readScrollY();
+                var delta = y - lastScrollY;
+                lastScrollY = y;
+                if (delta === 0) return;
+                // Keep traveling forward. Scrolling back to the top does not rewind the line.
+                transformAmount += Math.abs(delta) * scrollFactor;
+                scrollingContent.css('transform', 'skewX(10deg)');
+                scrollingEls.css('transform', 'translate3d(' + (transformAmount * -1) + 'px, 0, 0)');
+                window.clearTimeout(skewTimer);
+                skewTimer = window.setTimeout(function () {
+                    scrollingContent.css('transform', 'skewX(0)');
+                }, 180);
                 checkBounds();
             }
 
-            var wheelAcc = 0;
-            var wheelRaf = null;
-            function flushWheel() {
-                wheelRaf = null;
-                if (Math.abs(wheelAcc) < 0.5) {
-                    wheelAcc = 0;
-                    return;
-                }
-                var acc = wheelAcc;
-                wheelAcc = 0;
-                var n = Math.min(8, Math.max(1, Math.round(Math.abs(acc) / 45)));
-                applyTransform(acc, n);
+            window.addEventListener('scroll', syncHeadlineToPageScroll, { passive: true });
+            if (window.lenis && typeof window.lenis.on === 'function') {
+                window.lenis.on('scroll', syncHeadlineToPageScroll);
             }
-
-            var lastTouchY = 0;
-            var isTouching = false;
-            var touchAcc = 0;
-            var touchRaf = null;
-            function flushTouch() {
-                touchRaf = null;
-                if (Math.abs(touchAcc) < 5) {
-                    touchAcc = 0;
-                    return;
-                }
-                var t = touchAcc;
-                touchAcc = 0;
-                var n = Math.min(6, Math.max(1, Math.round(Math.abs(t) / 40)));
-                applyTransform(t, n);
-            }
-
-            // Hero only: do not fight Lenis / page scroll when the pointer is over the grid below
-            var heroEl = container.closest('.containerdiag').get(0);
-            if (heroEl) {
-                // 1) WHEEL (desktop)
-                heroEl.addEventListener(
-                    'wheel',
-                    function (e) {
-                        wheelAcc += e.deltaY;
-                        if (!wheelRaf) {
-                            wheelRaf = requestAnimationFrame(flushWheel);
-                        }
-                    },
-                    { passive: true }
-                );
-
-                // 2) TOUCH (mobile) — only while gesture starts on the hero
-                heroEl.addEventListener(
-                    'touchstart',
-                    function (e) {
-                        if (!e.touches[0]) return;
-                        lastTouchY = e.touches[0].clientY;
-                        isTouching = true;
-                    },
-                    { passive: true }
-                );
-                heroEl.addEventListener(
-                    'touchmove',
-                    function (e) {
-                        if (!isTouching || !e.touches[0]) return;
-                        var currentY = e.touches[0].clientY;
-                        var deltaY = lastTouchY - currentY;
-                        if (Math.abs(deltaY) < 1) return;
-                        touchAcc += deltaY;
-                        lastTouchY = currentY;
-                        if (!touchRaf) {
-                            touchRaf = requestAnimationFrame(flushTouch);
-                        }
-                    },
-                    { passive: true }
-                );
-                function touchEnd() {
-                    isTouching = false;
-                }
-                heroEl.addEventListener('touchend', touchEnd, { passive: true });
-                heroEl.addEventListener('touchcancel', touchEnd, { passive: true });
-            }
+            syncHeadlineToPageScroll();
         });
     }
 });
