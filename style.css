@@ -178,6 +178,19 @@ img {
     color: #000000;
 }
 
+.page-archive .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 90;
+    background-color: rgb(255, 255, 255);
+}
+
+.page-archive .archive-content {
+    padding-bottom: 8.5rem;
+}
+
 .archive {
     display: grid;
     grid-template-columns: 1fr;

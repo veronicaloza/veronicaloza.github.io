@@ -8,9 +8,9 @@
 
 html,
 body {
-    overflow-y: auto;
-    height: 100%;
+    min-height: 100%;
     margin: 0;
+    background-color: white;
 }
 
 html {
@@ -105,7 +105,7 @@ html {
 
 p {
     font-family: degular, sans-serif;
-    width: 500px;
+    width: auto;
 }
 
 p a {
@@ -158,30 +158,28 @@ p a {
 
 
 .about-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    padding: 3rem 1rem 6rem;
+    display: block;
+    padding: 0;
 }
 
 .body-container {
-    position: fixed;
-    top: 3rem;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    padding: 0;
+    position: relative;
+    width: min(36rem, calc(100% - (50% - 5.75rem + 8px) - 1.5rem));
+    margin-top: 3rem;
+    margin-left: calc(50% - 5.75rem + 8px);
+    padding: 0 0 8.5rem;
     line-height: 1.3;
-    text-align: center;
-    pointer-events: none;
+    text-align: left;
+    pointer-events: auto;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 .bio-align {
-    display: inline-block;
+    display: block;
     position: relative;
+    height: auto;
     text-align: left;
-    vertical-align: top;
-    pointer-events: auto;
 }
 
 .bio-nav-measure {
@@ -189,7 +187,7 @@ p a {
     white-space: nowrap;
     height: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     font-style: normal;
     line-height: 1;
@@ -198,34 +196,42 @@ p a {
 .bio-nav-measure,
 .bio-nav-measure span {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     font-style: normal;
     line-height: 1;
 }
 
 .body-container p {
-    position: absolute;
+    position: static;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    text-align: left;
+}
+
+.bio-column {
+    position: relative;
     left: 0;
     top: 0;
-    width: min(500px, 42vw);
-    margin-top: 0;
-    text-align: left;
+    width: 100%;
+    height: auto;
+    overflow: visible;
 }
 
 .about-portrait {
     position: fixed;
     top: 3rem;
     left: 1rem;
-    width: auto;
+    width: min(256px, 32vw);
     margin: 0;
-    pointer-events: none;
     z-index: 1;
+    pointer-events: none;
 }
 
 .about-portrait img {
     display: block;
-    width: min(360px, 30%);
+    width: 100%;
     aspect-ratio: 3 / 4;
     height: auto;
     max-width: none;
@@ -236,14 +242,20 @@ p a {
 
 @media (max-width: 800px) {
     .about-layout {
-        grid-template-columns: 1fr;
-        padding: 3rem 1rem 6rem;
+        display: block;
+        padding: 3rem 1rem 0;
     }
 
     .body-container {
-        position: static;
-        text-align: left;
-        pointer-events: auto;
+        width: 100%;
+        max-width: none;
+        margin-top: 1.5rem;
+        margin-left: 0;
+        padding: 0 0 8.5rem;
+    }
+
+    .bio-align {
+        display: block;
     }
 
     .bio-nav-measure {
@@ -252,13 +264,22 @@ p a {
 
     .body-container p {
         position: static;
-        width: min(500px, 100%);
+        width: auto;
+    }
+
+    .bio-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        overflow: visible;
     }
 
     .about-portrait {
         position: static;
-        width: 100%;
-        padding-bottom: 1.5rem;
+        top: auto;
+        left: auto;
+        width: min(360px, 100%);
+        margin: 0 0 1.5rem;
     }
 
     .about-portrait img {
