@@ -197,6 +197,11 @@ img {
     color: #000000;
 }
 
+body.page-archive {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .page-archive .footer {
     position: fixed;
     left: 0;
@@ -206,8 +211,67 @@ img {
     background-color: rgb(255, 255, 255);
 }
 
+.page-archive .header {
+    display: none;
+}
+
 .page-archive .archive-content {
-    padding-bottom: 8.5rem;
+    position: fixed;
+    top: 46px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.explorations-globe {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    margin: 0;
+}
+
+.explorations-globe canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: grab;
+}
+
+.explorations-caption {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 6.75rem;
+    z-index: 120;
+    margin: 0;
+    padding: 0 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #333333;
+    text-align: center;
+    pointer-events: auto;
+}
+
+.explorations-caption[hidden] {
+    display: none;
+}
+
+.explorations-caption a,
+.explorations-caption span {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.explorations-caption-line,
+.explorations-caption span + span {
+    margin-top: 0.1rem;
+    font-size: 13px;
+    font-style: italic;
 }
 
 .archive {
@@ -334,6 +398,13 @@ img {
     position: relative;
     background-color: #333333;
     overflow: hidden;
+}
+
+#eight {
+    background-color: #f2f2f2;
+    background-image: url("thumbnails/six.jpg?v=2");
+    background-size: cover;
+    background-position: center center;
 }
 
 #seven video {

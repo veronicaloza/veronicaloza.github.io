@@ -5,6 +5,7 @@ const PROJECT_NAV = [
     { id: 'three', path: 'three/index.html', categories: ['Branding'] },
     { id: 'five', path: 'five/index.html', categories: ['Website', 'Editorial'] },
     { id: 'four', path: 'four/index.html', categories: ['Editorial'] },
+    { id: 'six', path: 'six/index.html', categories: [] },
 ];
 
 function getFilteredOrder(filter) {

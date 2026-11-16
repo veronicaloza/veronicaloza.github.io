@@ -1,0 +1,301 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 46px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body,
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+    cursor: url(../Images/fork.png), auto;
+    background-color: black;
+}
+
+.nav-btn {
+    position: fixed;
+    top: 60px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid white;
+    z-index: 2;
+    mix-blend-mode: difference;
+    transition: background-color 0.2s ease, color 0.2s ease, mix-blend-mode 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+    mix-blend-mode: normal;
+}
+
+.nav-prev {
+    left: 20px;
+}
+
+.nav-next {
+    right: 20px;
+}
+
+.Mini-Titles {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    width: auto;
+    box-sizing: border-box;
+    background-color: white;
+    height: 40px;
+    padding: 0 1rem;
+    border-bottom: 0.5px solid #333333;
+    z-index: 200;
+}
+
+.Mini-Titles p,
+.Mini-Titles a {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.Mini-Titles a:hover {
+    color: black;
+    font-style: italic;
+}
+
+.scroll-progress-bar {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: transparent;
+    z-index: 1;
+}
+
+.scroll-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #FF62FF;
+}
+
+.mini-titles-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    z-index: 201;
+    pointer-events: none;
+    transform: none;
+}
+
+.mini-titles-nav a,
+.nav-comma {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    vertical-align: baseline;
+    pointer-events: auto;
+}
+
+.nav-comma {
+    color: #333333;
+    margin-right: 0.4rem;
+}
+
+.nav-globe {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+    z-index: 202;
+    cursor: pointer;
+}
+
+.nav-globe canvas {
+    display: block;
+    width: 32px !important;
+    height: 32px !important;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.header {
+    margin-top: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.description {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    align-items: first baseline;
+    width: 80%;
+    max-width: 1200px;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 5rem auto 3rem;
+    padding: 0 1rem;
+    color: white;
+}
+
+#titles {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
+    line-height: 2px;
+}
+
+span {
+    font-weight: bold;
+}
+
+#date {
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: small;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+#artbio {
+    width: 700px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.item {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem 1rem;
+}
+
+.scroll-top-btn {
+    padding: 8px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.scroll-top-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.block-2up img {
+    display: block;
+    width: 100%;
+    border: 1px solid red;
+}
+
+@media (min-width: 800px) {
+    .block-2up {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    body,
+    html {
+        overflow-x: hidden;
+        max-width: 100%;
+        cursor: url(../Images/fork.png), auto;
+        background-color: #F9F9F9;
+    }
+
+    .description {
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        align-items: first baseline;
+        width: 80%;
+        max-width: 1200px;
+        justify-content: space-between;
+        gap: 100px;
+        margin: 5rem auto 3rem;
+        padding: 0 1rem;
+        color: white;
+    }
+
+    #artbio {
+        width: 100%;
+    }
+
+}
