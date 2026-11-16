@@ -436,12 +436,40 @@ img {
 
 .block-2up {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
 .block-2up > div {
-    grid-column: span 2;
+    grid-column: auto;
+    min-width: 0;
+}
+
+.block-2up.is-stacked {
+    display: block;
+    position: relative;
+}
+
+.block-2up.is-stacked > div {
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .block-2up {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .block-2up > div {
+        grid-column: span 2;
+    }
+
+    .block-2up.is-stacked {
+        display: block;
+    }
+
+    .block-2up.is-stacked > div {
+        grid-column: auto;
+    }
 }
 
 .block-2up img,
@@ -449,4 +477,18 @@ img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.block-2up .video-crop {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+}
+
+.block-2up .video-crop video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }

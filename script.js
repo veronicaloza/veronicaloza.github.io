@@ -107,3 +107,51 @@ if (select && filterButtons.length) {
 } else if (select && entries.length) {
     updateEntryLinks(select.value);
 }
+
+const explorationGrid = document.querySelector('.block-2up');
+if (explorationGrid) {
+    const explorationGap = 10;
+    let explorationFrame = 0;
+
+    function layoutExplorations() {
+        const items = [...explorationGrid.children];
+        const columns = window.innerWidth >= 768 ? 4 : 2;
+        const width = (explorationGrid.clientWidth - explorationGap * (columns - 1)) / columns;
+        const columnHeights = Array(columns).fill(0);
+
+        explorationGrid.classList.add('is-stacked');
+        items.forEach((item) => {
+            item.style.width = width + 'px';
+        });
+        items.forEach((item, index) => {
+            const column = index % columns;
+            item.style.left = column * (width + explorationGap) + 'px';
+            item.style.top = columnHeights[column] + 'px';
+            columnHeights[column] += item.offsetHeight + explorationGap;
+        });
+
+        const stackedHeight = Math.max(...columnHeights, 0) - explorationGap;
+        explorationGrid.style.height = Math.max(stackedHeight, 0) + 'px';
+        if (window.lenis && typeof window.lenis.resize === 'function') window.lenis.resize();
+    }
+
+    function scheduleExplorations() {
+        if (explorationFrame) return;
+        explorationFrame = requestAnimationFrame(() => {
+            explorationFrame = 0;
+            layoutExplorations();
+        });
+    }
+
+    scheduleExplorations();
+    window.addEventListener('resize', scheduleExplorations);
+    window.addEventListener('load', scheduleExplorations);
+    explorationGrid.querySelectorAll('img, video').forEach((media) => {
+        media.addEventListener('load', scheduleExplorations);
+        media.addEventListener('loadedmetadata', scheduleExplorations);
+    });
+    if (typeof ResizeObserver !== 'undefined') {
+        const explorationObserver = new ResizeObserver(scheduleExplorations);
+        explorationGrid.querySelectorAll(':scope > div').forEach((item) => explorationObserver.observe(item));
+    }
+}

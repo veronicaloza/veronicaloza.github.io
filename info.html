@@ -28,6 +28,7 @@
 
     <div class="about-layout">
         <figure class="about-portrait">
+            <p class="globe-caption">Click on any image to learn more about me :)</p>
             <div id="about-globe"></div>
         </figure>
 
@@ -53,6 +54,12 @@
                             rel="noopener">Instagram</a> or email me at <a
                             href="mailto:nica.a.loza@gmail.com">nica.a.loza@gmail.com</a>
                     </p>
+                    <div class="photo-viewer" id="photo-viewer" hidden>
+                        <button type="button" class="photo-viewer-close" aria-label="Close">×</button>
+                        <button type="button" class="photo-viewer-prev" aria-label="Previous image">←</button>
+                        <img class="photo-viewer-image" alt="">
+                        <button type="button" class="photo-viewer-next" aria-label="Next image">→</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,16 +73,9 @@
         <p class="footer-copy">©2026 Veronica Loza. All rights reserved.</p>
     </footer>
 
-    <div class="photo-viewer" id="photo-viewer" hidden>
-        <button type="button" class="photo-viewer-close" aria-label="Close">×</button>
-        <button type="button" class="photo-viewer-prev" aria-label="Previous image">←</button>
-        <img class="photo-viewer-image" alt="">
-        <button type="button" class="photo-viewer-next" aria-label="Next image">→</button>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
-    <script src="about-globe.js?v=13"></script>
-    <script src="nav-globe.js?v=3"></script>
+    <script src="about-globe.js?v=18"></script>
+    <script src="nav-globe.js?v=7"></script>
 </body>
 
 </html>

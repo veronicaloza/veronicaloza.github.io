@@ -1,12 +1,13 @@
 const pictureFiles = [
     'my-pictures/Veronica_Loza_Picture.jpg',
     'my-pictures/photo_2026-11-14_14-39-03.jpg',
-    'my-pictures/photo_2026-11-14_14-39-06.jpg',
-        'my-pictures/photo_2026-11-14_14-39-10.jpg',
-        'my-pictures/photo_2026-11-14_15-22-04.jpg',
-        'my-pictures/photo_2026-11-14_15-59-08.jpg',
-        'my-pictures/photo_2026-11-14_15-59-10.jpg',
-        'my-pictures/photo_2026-11-14_15-59-12.jpg'
+    'my-pictures/photo_2026-11-14_14-39-10.jpg',
+    'my-pictures/photo_2026-11-14_15-59-08.jpg',
+    'my-pictures/photo_2026-11-14_15-59-10.jpg',
+    'my-pictures/photo_2026-11-14_15-59-12.jpg',
+    'my-pictures/photo_2026-11-15_14-22-41.jpg',
+    'my-pictures/photo_2026-11-15_14-22-44.jpg',
+    'my-pictures/Frame 2460.png'
 ];
 
 let photos = [];
@@ -36,7 +37,7 @@ function layoutCards() {
     let best = null;
     let bestScore = Infinity;
 
-    for (let attempt = 0; attempt < 8; attempt++) {
+    for (let attempt = 0; attempt < 5; attempt++) {
         const result = placeCards(radius, scale);
         if (result.score < bestScore) {
             bestScore = result.score;
@@ -65,7 +66,7 @@ function placeCards(radius, scale) {
 
     let best = null;
     let bestScore = Infinity;
-    for (let attempt = 0; attempt < 80; attempt++) {
+    for (let attempt = 0; attempt < 24; attempt++) {
         const placed = specs.map((spec) => ({
             ...spec,
             theta: random(TWO_PI),
@@ -85,13 +86,13 @@ function placeCards(radius, scale) {
 function overlapScore(placed, radius) {
     const dist = cameraDistance();
     const tanHalf = cameraTanHalf();
-    const pitches = [-0.55, 0, 0.55];
+    const pitches = [0];
     let score = 0;
 
     pitches.forEach((pitch) => {
         const eye = rotX({ x: 0, y: 0, z: dist }, pitch);
-        for (let step = 0; step < 24; step++) {
-            const spin = step * TWO_PI / 24;
+        for (let step = 0; step < 12; step++) {
+            const spin = step * TWO_PI / 12;
             const quads = placed.map((card) => {
                 if (!onNearSide(card, radius, spin, eye)) return null;
                 return inflateQuad(
@@ -355,6 +356,7 @@ function setupPhotoViewer() {
         image.src = pictureFiles[viewerIndex];
         image.alt = 'Photo ' + (viewerIndex + 1);
         viewer.hidden = false;
+        viewer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     viewer.querySelector('.photo-viewer-prev').addEventListener('click', (event) => {
@@ -368,9 +370,6 @@ function setupPhotoViewer() {
     viewer.querySelector('.photo-viewer-close').addEventListener('click', (event) => {
         event.stopPropagation();
         viewer.hidden = true;
-    });
-    viewer.addEventListener('click', (event) => {
-        if (event.target === viewer) viewer.hidden = true;
     });
     window.addEventListener('keydown', (event) => {
         if (viewer.hidden) return;
